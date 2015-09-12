@@ -1,28 +1,38 @@
-== README
+User Stories:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tier 1: The Job Search
 
-Things you may want to cover:
+- As a job seeker, I want a central location to track the companies I’ve applied to so that I have a record I can refer to at a later date if needed
 
-* Ruby version
+- As a job seeker, I want a timestamp displayed with the application record so that I know how long ago I applied to a position.
 
-* System dependencies
+- As a job seeker, I want the job post URL and application site URL associated with the application record so that I can refer to it at a later date if needed
 
-* Configuration
+- As a job seeker, I want the resume and cover letter versions I applied with to be associated with the application record so that I can reference them at a later date if needed
 
-* Database creation
+Tier 2: Additional Job Search Features
 
-* Database initialization
+- As a job seeker, I would like a central location to store all basic hiring information, such as social media URLs / brand statement / bio / elevator pitch / etc. so that I can refer to them when needed
 
-* How to run the test suite
+- As a job seeker, I would like a task list to be available to me for job-seeker related tasks, such as sending follow-up emails, so that I do not forget to perform those tasks
 
-* Services (job queues, cache servers, search engines, etc.)
+- As a job seeker, I would like links to resources to be available to me, such as resume templates and sample interview questions, so that I could be well-prepared for an interview
 
-* Deployment instructions
+Tier 3: The Interview
 
-* ...
+- As a job seeker, I would like a central location to track interview details such as the office address, interviewer names, etc. so that I can reference them during the interview process if needed
 
+- As a job seeker, I would like central place to store answers to interview questions, such as when I encountered a problem I couldn't solve, so that I can study them before an interview
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- As a job seeker, I would like a task list to be available to me for interview related tasks, such as sending thank you emails, so that I do not forget to perform those tasks
+
+Tier 4: Potential Features
+
+- As a job seeker, I would like a branding task list, such as ordering business cards, to be available to me so that I represent myself professionally
+
+(- As a job seeker, I want application records to change color as the 30-day mark approaches so that I know how long ago I applied to a position.
+
+(- As a job seeker, I would like google calendar reminder integration for tasks associated with my job search so that I do not forget to perform them
+
+(- As a job seeker, I would like the ability to add custom items to any task list so that I do not forget to perform tasks that are custom to the position
+
