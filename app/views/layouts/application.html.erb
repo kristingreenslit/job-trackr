@@ -11,6 +11,7 @@
 	<% if current_user %>
     	<li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
 	<% end %>
+	<!-- <a class="login-btn" href="/accounts/sign_in">Sign In</a> -->
 
 <%= yield %>
 
