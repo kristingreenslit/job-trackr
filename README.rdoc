@@ -1,38 +1,23 @@
-User Stories:
+##User Stories:
 
-Tier 1: The Job Search
+###Tier 1: The Job Search (MVP)
 
-- As a job seeker, I want a central location to track the companies I’ve applied to so that I have a record I can refer to at a later date if needed
+- As a job seeker, I want a responsive, single page web application to track positions I’ve applied to so that I have one place to store data associated with an application: job title, company name, date applied, link to job post, link to application site, notes, link to resume submitted, link to cover letter submitted.
 
-- As a job seeker, I want a timestamp displayed with the application record so that I know how long ago I applied to a position.
+- As a job seeker, I want application records to change color as the 7-day, 14-day and 30-day marks approach so that I know which opportunities need follow-up communication.
 
-- As a job seeker, I want the job post URL and application site URL associated with the application record so that I can refer to it at a later date if needed
+###Tier 2: The Interview
 
-- As a job seeker, I want the resume and cover letter versions I applied with to be associated with the application record so that I can reference them at a later date if needed
+- As a job seeker, I want application records to move to the top of the list when the interview process has started, and a section to note relevant interview details (office address, co. URL, interviewer names, etc.) so that I can reference the info during the interview process.
 
-Tier 2: Additional Job Search Features
+- As a job seeker, I want a task list to be available to me for interview related tasks so that I do not forget to perform those tasks (printing hard copies of my resume, sending a thank you email, etc.).
 
-- As a job seeker, I would like a central location to store all basic hiring information, such as social media URLs / brand statement / bio / elevator pitch / etc. so that I can refer to them when needed
+###Tier 3: Additional Features
 
-- As a job seeker, I would like a task list to be available to me for job-seeker related tasks, such as sending follow-up emails, so that I do not forget to perform those tasks
+- As a job seeker, I would like a section to store all basic hiring information (social media URLs / brand statement / bio / etc.) so that I can copy and paste them as needed.
 
-- As a job seeker, I would like links to resources to be available to me, such as resume templates and sample interview questions, so that I could be well-prepared for an interview
+- As a job seeker, I would like a section of links to resources to be available to me so that I could be well-prepared for an interview (resume templates, sample interview questions, etc.).
 
-Tier 3: The Interview
+- As a job seeker, I would like central place to store answers to interview questions so that I can study them before an interview (when I encountered a problem I couldn't solve, how well I work with a team, etc.).
 
-- As a job seeker, I would like a central location to track interview details such as the office address, interviewer names, etc. so that I can reference them during the interview process if needed
-
-- As a job seeker, I would like central place to store answers to interview questions, such as when I encountered a problem I couldn't solve, so that I can study them before an interview
-
-- As a job seeker, I would like a task list to be available to me for interview related tasks, such as sending thank you emails, so that I do not forget to perform those tasks
-
-Tier 4: Potential Features
-
-- As a job seeker, I would like a branding task list, such as ordering business cards, to be available to me so that I represent myself professionally
-
-- As a job seeker, I want application records to change color as the 30-day mark approaches so that I know how long ago I applied to a position.
-
-- As a job seeker, I would like google calendar reminder integration for tasks associated with my job search so that I do not forget to perform them
-
-- As a job seeker, I would like the ability to add custom items to any task list so that I do not forget to perform tasks that are custom to the position
 

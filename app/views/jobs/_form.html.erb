@@ -12,28 +12,36 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :co_name %><br>
+    <%= f.label :job_title, "Job Title:" %><br>
+    <%= f.text_field :job_title %>
+  </div>
+  <div class="field">
+    <%= f.label :co_name, "Company Name:" %><br>
     <%= f.text_field :co_name %>
   </div>
   <div class="field">
-    <%= f.label :date_applied %><br>
+    <%= f.label :date_applied, "Date of Application Submission:" %><br>
     <%= f.text_field :date_applied %>
   </div>
   <div class="field">
-    <%= f.label :listing_url %><br>
+    <%= f.label :listing_url, "Job Post URL:" %><br>
     <%= f.text_field :listing_url %>
   </div>
   <div class="field">
-    <%= f.label :application_url %><br>
+    <%= f.label :application_url, "Application Site URL:" %><br>
     <%= f.text_field :application_url %>
   </div>
   <div class="field">
-    <%= f.label :resume_url %><br>
+    <%= f.label :resume_url, "Link to Resume Version Submitted:" %><br>
     <%= f.text_field :resume_url%>
   </div>
   <div class="field">
-    <%= f.label :coverletter_url %><br>
+    <%= f.label :coverletter_url, "Link to Cover Letter Version Submitted:" %><br>
     <%= f.text_field :coverletter_url%>
+  </div>
+  <div class="field">
+    <%= f.label :notes, "Notes:" %><br>
+    <%= f.text_field :notes %>
   </div>
   <div class="actions">
     <%= f.submit %>

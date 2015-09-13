@@ -1,34 +1,44 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Job Title:</strong>
+  <%= @job.job_title %>
+</p>
+
+<p>
+  <strong>Company Name:</strong>
   <%= @job.co_name %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Date Applied:</strong>
   <%= @job.date_applied %>
 </p>
 
 
 <p>
-  <strong>Listing:</strong>
+  <strong>Listing URL:</strong>
   <%= @job.listing_url %>
 </p>
 
 <p>
-  <strong>App url:</strong>
+  <strong>Application Site URL:</strong>
   <%= @job.application_url %>
 </p>
 
 <p>
-  <strong>Res url:</strong>
+  <strong>Resume URL:</strong>
   <%= @job.resume_url %>
 </p>
 
 <p>
-  <strong>Cov ltr:</strong>
+  <strong>Cover Letter URL:</strong>
   <%= @job.coverletter_url %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @job.notes %>
 </p>
 
 <%= link_to 'Edit', edit_job_path(@job) %> |

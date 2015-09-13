@@ -18,12 +18,14 @@ ActiveRecord::Schema.define(version: 20150912234639) do
 
   create_table "jobs", force: :cascade do |t|
     t.integer  "user_id"
+    t.string   "job_title"
     t.string   "co_name"
     t.string   "date_applied"
     t.string   "listing_url"
     t.string   "application_url"
     t.string   "resume_url"
     t.string   "coverletter_url"
+    t.string   "notes"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

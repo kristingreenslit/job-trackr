@@ -8,7 +8,7 @@
 
 Job.destroy_all
 
-Job.create(co_name: "my first job", listing_url: "www.example.com", application_url: "www.example.com")
-
-
+Job.create(job_title: "Portrait Painter", co_name: "Chuck Close Gallery", date_applied: "September 16, 2015", listing_url: "www.example.com", application_url: "www.example.com", resume_url: "www.example.com", coverletter_url: "www.example.com", notes: "View up close, then far away")
+Job.create(job_title: "Chief Design Officer", co_name: "Ive's Hardware", date_applied: "September 16, 2015", listing_url: "www.example.com", application_url: "www.example.com", resume_url: "www.example.com", coverletter_url: "www.example.com", notes: "Manager's name is Tim")
+Job.create(job_title: "Duchess", co_name: "Kate's Cambridge Clothier", date_applied: "September 16, 2015", listing_url: "www.example.com", application_url: "www.example.com", resume_url: "www.example.com", coverletter_url: "www.example.com", notes: "Has returned from maternity leave")
 
