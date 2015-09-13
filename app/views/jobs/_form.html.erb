@@ -1,0 +1,41 @@
+<%= form_for(@job) do |f| %>
+  <% if @job.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+      <ul>
+      <% @job.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :co_name %><br>
+    <%= f.text_field :co_name %>
+  </div>
+  <div class="field">
+    <%= f.label :date_applied %><br>
+    <%= f.text_field :date_applied %>
+  </div>
+  <div class="field">
+    <%= f.label :listing_url %><br>
+    <%= f.text_field :listing_url %>
+  </div>
+  <div class="field">
+    <%= f.label :application_url %><br>
+    <%= f.text_field :application_url %>
+  </div>
+  <div class="field">
+    <%= f.label :resume_url %><br>
+    <%= f.text_field :resume_url%>
+  </div>
+  <div class="field">
+    <%= f.label :coverletter_url %><br>
+    <%= f.text_field :coverletter_url%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

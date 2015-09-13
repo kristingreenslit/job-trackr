@@ -30,9 +30,9 @@ Tier 4: Potential Features
 
 - As a job seeker, I would like a branding task list, such as ordering business cards, to be available to me so that I represent myself professionally
 
-(- As a job seeker, I want application records to change color as the 30-day mark approaches so that I know how long ago I applied to a position.
+- As a job seeker, I want application records to change color as the 30-day mark approaches so that I know how long ago I applied to a position.
 
-(- As a job seeker, I would like google calendar reminder integration for tasks associated with my job search so that I do not forget to perform them
+- As a job seeker, I would like google calendar reminder integration for tasks associated with my job search so that I do not forget to perform them
 
-(- As a job seeker, I would like the ability to add custom items to any task list so that I do not forget to perform tasks that are custom to the position
+- As a job seeker, I would like the ability to add custom items to any task list so that I do not forget to perform tasks that are custom to the position
 

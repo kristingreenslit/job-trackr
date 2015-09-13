@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Jobs</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Company Name</th>
+      <th>Date Applied</th>
+      <th>Listing URL</th>
+      <th>Application URL</th>
+      <th>Resume URL</th>
+      <th>Cover Letter URL</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.co_name %></td>
+        <td><%= job.date_applied %></td>
+        <td><%= job.listing_url %></td>
+        <td><%= job.application_url %></td>
+        <td><%= job.resume_url %></td>
+        <td><%= job.coverletter_url %></td>
+        <td><%= link_to 'Show', job %></td>
+        <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job', new_job_path %>

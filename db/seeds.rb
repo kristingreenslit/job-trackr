@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Job.destroy_all
+
+Job.create(co_name: "my first job", listing_url: "www.example.com", application_url: "www.example.com")
+
+
+
