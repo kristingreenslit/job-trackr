@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body data-no-turbolink>
+<body>
 	<h2>Job Trackr</h2>
 	<% if current_user %>
     	<li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
