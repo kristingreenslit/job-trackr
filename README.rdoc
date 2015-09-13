@@ -14,7 +14,7 @@
 
 ### Tier 3: Additional Features
 
-- As a job seeker, I would like a section to store all basic hiring information (social media URLs / brand statement / bio / etc.) so that I can copy and paste them as needed.
+- As a job seeker, I would like a section to store all basic hiring information (social media URLs / brand statement / bio, etc.) so that I can copy and paste them as needed.
 
 - As a job seeker, I would like a section of links to resources to be available to me so that I could be well-prepared for an interview (resume templates, sample interview questions, etc.).
 
