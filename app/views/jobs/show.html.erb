@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% if current_user %>
+      <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
+  <% end %>
+
 <p>
   <strong>Job Title:</strong>
   <%= @job.job_title %>

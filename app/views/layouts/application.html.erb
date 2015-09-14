@@ -7,10 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<h2>Job Trackr</h2>
-	<% if current_user %>
-    	<li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
-	<% end %>
+	<div id="main-nav">
+		<div id="masthead"><h2>Job Trackr</h2></div>
+		<div id="home-buttons">
+			<div id="home-button2"><a href="/accounts/sign_up">Sign Up</a></h2></div>
+			<div id="home-button1"><a href="/accounts/sign_in">Sign In</a></h2></div>
+		</div>
+	</div>
+	
 	<!-- <a class="login-btn" href="/accounts/sign_in">Sign In</a> -->
 
 <%= yield %>

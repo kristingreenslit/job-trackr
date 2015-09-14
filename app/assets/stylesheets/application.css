@@ -14,14 +14,19 @@
  *= require_self
  */
 
+ @import url(https://fonts.googleapis.com/css?family=Roboto:400&subset=latin,greek);
+/* @import url(https://fonts.googleapis.com/css?family=Lato);*/
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
 * {
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
 }
 
 a:link { text-decoration: none; }
-a:hover { color: #6496c8; }
-a:visited { color: #346392; }
-a:active { color: #346392; }
+a:hover { color: #666; }
+a:visited { color: #666; }
+a:active { color: #666; }
 
 html {
  	height: 100%; /* background image has no white space at the bottom regardless of viewport width */
@@ -34,6 +39,8 @@ body {
 	background-image: url('/assets/business_female.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0 auto;
 }
 
 table {
@@ -56,18 +63,39 @@ td {
 	border-bottom: 1px solid gray;
 }
 
-input[type="submit"], .devise-link {
+#home-button1, #home-button2 {
 	width: 125px;
 	height: 40px;
-	color: #346392;
+	color: #666;
 	background: rgba(0,0,0,0);
-	border: solid 2px #346392;
+	border: solid 2px #666;
 	font-size: 16px;
 	text-align: center;
-	margin: 20px;
+	margin: 10px;
 	padding: 10px 25px;
 	outline: none;
 	text-transform: uppercase;
 	cursor: pointer;
+}
+
+#home-buttons {
+	display: flex;
+	margin-top: -75px;
+	justify-content: flex-end;
+}
+
+#main-nav{
+	height: 65px;
+	background-color: rgba(255, 255, 255, 0.50);
+	padding: 1px;
+}
+
+#masthead {
+	font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin-left: 20px;
+    font-weight: 700;
+    font-size: 1.7em;
+    color: #666;
+    margin-top: -17px;
 }
 
