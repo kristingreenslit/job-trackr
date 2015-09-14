@@ -14,7 +14,7 @@
  *= require_self
  */
 
- @import url(https://fonts.googleapis.com/css?family=Roboto:400&subset=latin,greek);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400&subset=latin,greek);
 /* @import url(https://fonts.googleapis.com/css?family=Lato);*/
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
@@ -65,7 +65,7 @@ td {
 
 #home-button1, #home-button2 {
 	width: 125px;
-	height: 40px;
+	height: 42px;
 	color: #666;
 	background: rgba(0,0,0,0);
 	border: solid 2px #666;
@@ -97,5 +97,38 @@ td {
     font-size: 1.7em;
     color: #666;
     margin-top: -17px;
+}
+
+#tagline {
+	margin-left: 20px;
+	color: #666;
+	font-size: 1em;
+}
+
+@media only screen and (max-width: 850px) {
+
+	#home-buttons {
+		display: block;
+		margin-top: 65px;
+		justify-content: flex-end;
+	}
+
+	#home-button1, #home-button2 {
+		width: 100px;
+		height: 38px;
+		color: #666;
+		font-size: 12px;
+	}
+
+	#main-nav{
+		height: 60px;
+		padding: 4px;
+	}
+
+	#masthead {
+		margin-left: 15px;
+		font-size: 1.5em;
+	}
+
 }
 
