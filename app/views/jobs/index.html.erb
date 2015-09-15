@@ -1,11 +1,17 @@
+<div id="main-nav">
+  <div id="masthead">Job Trackr</div>
+    <div id="tagline">Job Applications</div>
+</div>
+
 <br><br>
+
 <p id="notice"><%= notice %></p>
 
 <% if current_user %>
   <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
 <% end %>
 
-<div id="tagline">Job Applications</div>
+<br>
 
 <div class="container">
   <table>

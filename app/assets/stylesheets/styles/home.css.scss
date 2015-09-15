@@ -1,0 +1,56 @@
+body {
+	background-color: #eee;
+	font-family: arial, sans-serif;
+	font-size: .8em;
+	background-image: url('/assets/business_female.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0 auto;
+}
+
+#home-button1, #home-button2 {
+	width: 125px;
+	height: 42px;
+	color: #666;
+	background: rgba(0,0,0,0);
+	border: solid 2px #666;
+	font-size: 16px;
+	text-align: center;
+	margin: 10px;
+	padding: 10px 25px;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+#home-buttons {
+	display: flex;
+	margin-top: -92px;
+	justify-content: flex-end;
+}
+
+#home-button1:hover, #home-button2:hover {
+	background: rgba(0,0,0,0.2);
+}
+
+@media only screen and (max-width: 850px) {
+
+	#home-buttons {
+		display: block;
+		margin-top: 20px;
+		justify-content: flex-end;
+	}
+
+	#home-button1, #home-button2 {
+		width: 100px;
+		height: 38px;
+		color: #666;
+		font-size: 13px;
+		background-color: rgba(255, 255, 255, 0.70);
+		border: solid 1px #666;
+		padding: 11px;
+		font-weight: 500;
+	}
+
+}
