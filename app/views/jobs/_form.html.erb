@@ -1,49 +1,56 @@
-<%= form_for(@job) do |f| %>
-  <% if @job.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+<div class="login-status">
 
-      <ul>
-      <% @job.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <%= form_for(@job) do |f| %>
+    <% if @job.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+
+        <ul>
+        <% @job.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+</div>
+
+<div class="container">
+
+    <div class="field">
+      <%= f.label :job_title, "Job Title:" %><br>
+      <%= f.text_field :job_title %>
+    </div>
+    <div class="field">
+      <%= f.label :co_name, "Company Name:" %><br>
+      <%= f.text_field :co_name %>
+    </div>
+    <div class="field">
+      <%= f.label :date_applied, "Date of Application Submission:" %><br>
+      <%= f.text_field :date_applied %>
+    </div>
+    <div class="field">
+      <%= f.label :listing_url, "Job Post URL:" %><br>
+      <%= f.text_field :listing_url %>
+    </div>
+    <div class="field">
+      <%= f.label :application_url, "Application Site URL:" %><br>
+      <%= f.text_field :application_url %>
+    </div>
+    <div class="field">
+      <%= f.label :resume_url, "Link to Resume Version Submitted:" %><br>
+      <%= f.text_field :resume_url%>
+    </div>
+    <div class="field">
+      <%= f.label :coverletter_url, "Link to Cover Letter Submitted:" %><br>
+      <%= f.text_field :coverletter_url%>
+    </div>
+    <div class="field">
+      <%= f.label :notes, "Notes:" %><br>
+      <%= f.text_field :notes %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :job_title, "Job Title:" %><br>
-    <%= f.text_field :job_title %>
-  </div>
-  <div class="field">
-    <%= f.label :co_name, "Company Name:" %><br>
-    <%= f.text_field :co_name %>
-  </div>
-  <div class="field">
-    <%= f.label :date_applied, "Date of Application Submission:" %><br>
-    <%= f.text_field :date_applied %>
-  </div>
-  <div class="field">
-    <%= f.label :listing_url, "Job Post URL:" %><br>
-    <%= f.text_field :listing_url %>
-  </div>
-  <div class="field">
-    <%= f.label :application_url, "Application Site URL:" %><br>
-    <%= f.text_field :application_url %>
-  </div>
-  <div class="field">
-    <%= f.label :resume_url, "Link to Resume Version Submitted:" %><br>
-    <%= f.text_field :resume_url%>
-  </div>
-  <div class="field">
-    <%= f.label :coverletter_url, "Link to Cover Letter Version Submitted:" %><br>
-    <%= f.text_field :coverletter_url%>
-  </div>
-  <div class="field">
-    <%= f.label :notes, "Notes:" %><br>
-    <%= f.text_field :notes %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

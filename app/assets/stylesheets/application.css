@@ -1,69 +1,108 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
-
 * {
-	box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
-	list-style: none;
-}
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  list-style: none; }
 
 html {
- 	height: 100%; /* background image has no white space at the bottom regardless of viewport height */
-}
+  height: 100%;
+  /* background image has no white space at the bottom regardless of viewport height */ }
 
-a:link { color: #666; text-decoration: none; }
-a:hover { color: #474747; }
-a:visited { color: #666; }
-a:active { color: #666; }
+a:link {
+  color: #666;
+  text-decoration: none; }
+
+a:hover {
+  color: #474747; }
+
+a:visited {
+  color: #666; }
+
+a:active {
+  color: #666; }
+
+body {
+  background-color: #eee;
+  font-family: arial, sans-serif;
+  font-size: .8em;
+  background-image: url("/assets/business_female.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 auto; }
 
 h2 {
-	text-align: center; /* devise headings */
-}
+  text-align: center;
+  /* devise headings */
+  color: #5b5b5b; }
 
-#main-nav{
-	height: 65px;
-	background-color: rgba(255, 255, 255, 0.50);
-	padding: 1px; /* forces navbar to top of the viewport */
-}
+table {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  /* eliminates spaces in border-bottom between table data items */
+  padding: 5px;
+  text-align: left;
+  background-color: white; }
+
+th {
+  border-bottom: 2px solid gray;
+  padding: 5px; }
+
+td {
+  padding: 5px;
+  border-bottom: 1px solid gray; }
+
+#home-button1, #home-button2 {
+  width: 125px;
+  height: 42px;
+  color: #666;
+  background: transparent;
+  border: solid 2px #666;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px 25px;
+  outline: none;
+  text-transform: uppercase;
+  cursor: pointer; }
+
+#home-buttons {
+  display: flex;
+  margin-top: -90px;
+  justify-content: flex-end; }
+
+#home-button1:hover, #home-button2:hover {
+  background: rgba(0, 0, 0, 0.2); }
+
+#main-nav {
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1px;
+  /* forces navbar to top of the viewport */ }
 
 #masthead {
-	font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
-	margin-left: 19px;
-	margin-top: 11px;
-    font-weight: 700;
-    font-size: 2.7em;
-    color: #5b5b5b;
-}
+  font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-left: 19px;
+  margin-top: 11px;
+  font-weight: 700;
+  font-size: 2.7em;
+  color: #5b5b5b; }
 
 #signout-notice {
-	margin-left: 150px;
-}
+  margin-left: 150px; }
 
 #tagline {
-	margin-left: 20px;
-	margin-top: 20px;
-	color: #666;
-	font-size: 1.4em;
-	font-weight: 500;
-}
+  margin-left: 20px;
+  margin-top: 5px;
+  color: #666;
+  font-size: 1.4em;
+  font-weight: 500; }
 
-.actions, .field {   /* devise fields and actions */
+.actions, .field {
+  /* devise fields and actions */
   font-size: .9em;
   text-align: center;
   width: 300px;
@@ -71,41 +110,67 @@ h2 {
   margin: 0 auto;
   padding-top: 10px;
   color: #5b5b5b;
-  font-weight: 500;
-}
+  font-weight: 500; }
 
-.alert, .notice {   /* devise notices and alerts */
+.container {
   margin: 0 auto;
   text-align: center;
-  color: #5b5b5b;
-  font-weight: 500;
-}
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 90%;
+  height: 90%;
+  padding: 1px;
+  color: #5b5b5b; }
 
-.devise-links {     /* devise/shared/_links.html.erb */
-	text-align: center;
-	color: #5b5b5b;
-  	font-weight: 500;
-}
+.devise-links {
+  /* devise/shared/_links.html.erb */
+  text-align: center;
+  color: #5b5b5b;
+  font-weight: 500; }
+
+#notice, .login-status {
+  /* devise notices */
+  margin-top: 15px;
+  text-align: right;
+  margin-right: 3%;
+  margin-bottom: 15px;
+  color: #5b5b5b;
+  font-weight: 500; }
 
 @media only screen and (max-width: 850px) {
+  #home-buttons {
+    display: block;
+    margin-top: 20px;
+    margin-left: 6px;
+    justify-content: flex-end; }
 
+  #home-button1, #home-button2 {
+    width: 100px;
+    height: 38px;
+    color: #666;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: solid 1px #666;
+    padding: 11px;
+    font-weight: 500; }
 
-	#main-nav {
-		background-color: rgba(255, 255, 255, 0.70);
-		padding: 1px;
-	}
+  #main-nav {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1px; }
 
-	#masthead {
-		margin-left: 15px;
-		margin-top: 5px;
-		font-size: 2.2em;
-	}
+  #masthead {
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 2.2em; }
 
-	#tagline {
-		margin-top: 1px;
-		margin-left: 17px;
-		font-size: 1.2em;
-	}
+  #notice, .login-status {
+    /* devise notices */
+    /*margin-top: -120px;*/
+    text-align: left;
+    margin-left: 17px; }
 
-}
+  #tagline {
+    margin-top: -23px;
+    margin-left: 17px;
+    font-size: 1.2em; } }
 
+/*# sourceMappingURL=application.css.map */

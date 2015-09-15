@@ -1,50 +1,65 @@
-<p id="notice"><%= notice %></p>
+<div class="login-status">
 
-<% if current_user %>
-      <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
+  <% if current_user %>
+    <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
   <% end %>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Job Title:</strong>
-  <%= @job.job_title %>
-</p>
+</div>
 
-<p>
-  <strong>Company Name:</strong>
-  <%= @job.co_name %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Date Applied:</strong>
-  <%= @job.date_applied %>
-</p>
+  <h2>Show Job</h2>
 
+  <div class="container">
 
-<p>
-  <strong>Listing URL:</strong>
-  <%= @job.listing_url %>
-</p>
+  <p>
+    <strong>Job Title:</strong>
+    <%= @job.job_title %>
+  </p>
 
-<p>
-  <strong>Application Site URL:</strong>
-  <%= @job.application_url %>
-</p>
+  <p>
+    <strong>Company Name:</strong>
+    <%= @job.co_name %>
+  </p>
 
-<p>
-  <strong>Resume URL:</strong>
-  <%= @job.resume_url %>
-</p>
+  <p>
+    <strong>Date Applied:</strong>
+    <%= @job.date_applied %>
+  </p>
 
-<p>
-  <strong>Cover Letter URL:</strong>
-  <%= @job.coverletter_url %>
-</p>
+  <p>
+    <strong>Listing URL:</strong>
+    <%= @job.listing_url %>
+  </p>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @job.notes %>
-</p>
+  <p>
+    <strong>Application Site URL:</strong>
+    <%= @job.application_url %>
+  </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Back', jobs_path %>
+  <p>
+    <strong>Resume URL:</strong>
+    <%= @job.resume_url %>
+  </p>
 
+  <p>
+    <strong>Cover Letter URL:</strong>
+    <%= @job.coverletter_url %>
+  </p>
+
+  <p>
+    <strong>Notes:</strong>
+    <%= @job.notes %>
+  </p>
+
+  </div>
+
+  <br>
+
+  <%= link_to 'Edit', edit_job_path(@job) %> |
+  <%= link_to 'Back', jobs_path %>
+
+  <br><br>
+
+</div>

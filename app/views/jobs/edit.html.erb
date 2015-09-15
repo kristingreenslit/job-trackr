@@ -1,8 +1,19 @@
-<h1>Editing Job</h1>
+<div class="login-status">
 
-<p id="notice"><%= notice %></p>
+  <% if current_user %>
+    <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
+  <% end %>
+  <p id="notice"><%= notice %></p>
 
-<%= render 'form' %>
+</div>
 
-<%= link_to 'Show', @job %> |
-<%= link_to 'Back', jobs_path %>
+<div class="container">
+
+	<h2>Edit Job</h2>
+	<%= render 'form' %>
+	<br>
+	<%= link_to 'Show', @job %> |
+	<%= link_to 'Back', jobs_path %>
+	<br><br>
+
+</div>
