@@ -1,3 +1,5 @@
+
+
 <div class="login-status">
 
   <% if current_user %>
@@ -16,7 +18,7 @@
       <table>
         <thead>
           <tr>
-            <th colspan="1"></th>
+            <th colspan="1"></th>  <!-- delete column -->
             <th>Submission Date</th>
             <th>Company Name</th>
             <th>Company Website URL</th>
@@ -33,9 +35,9 @@
 
         <tbody>
           <% @jobs.each do |job| %>
-            <tr>
-               <td><%= link_to '(x)', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <td><%= job.app_dt %></td>
+            <tr class="alt">
+              <td><%= link_to '(x)', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td name="expdate"><%= job.app_dt %></td>
               <td><%= job.co_name %></td>
               <td><%= job.co_url %></td>
               <td><%= job.job_title %></td>
@@ -57,3 +59,7 @@
     <br><br>
 
 </div>
+
+<%= javascript_tag do %>
+  $("tr.alt:even").css("background-color", "#fcfceb");
+<% end %>
