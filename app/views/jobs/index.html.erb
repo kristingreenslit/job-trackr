@@ -37,13 +37,12 @@
           <% @jobs.each do |job| %>
             <tr class="alt">
               <td><%= link_to '(x)', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <td name="expdate"><%= job.app_dt %></td>
+              <td><%= job.app_dt %></td>
               <td><%= job.co_name %></td>
-              <td><%= job.co_url %></td>
+              <td><a href="http://<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
               <td><%= job.job_title %></td>
-              <td><%= job.list_url %></td>
+              <td><a href="http://<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>
               <td><%= job.note %></td>
-
       <!--    <td><%= job.app_url %></td>
               <td><%= job.res_url %></td>
               <td><%= job.cover_url %></td> -->
@@ -60,6 +59,7 @@
 
 </div>
 
-<%= javascript_tag do %>
-  $("tr.alt:even").css("background-color", "#fcfceb");
-<% end %>
+
+
+
+

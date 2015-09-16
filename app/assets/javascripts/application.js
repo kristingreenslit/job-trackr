@@ -16,3 +16,8 @@
 //= require_tree .
 
 
+$(document).ready(function(){
+
+	$("tr.alt:odd").css("background-color", "#efefef");
+
+});
