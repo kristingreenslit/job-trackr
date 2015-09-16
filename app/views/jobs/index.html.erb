@@ -10,43 +10,50 @@
 <div class="container">
 
     <h2>Job Applications</h2>
+    <%= link_to '(+) New Application', new_job_path %>
+    <br><br>
 
       <table>
         <thead>
           <tr>
-            <th>Job Title</th>
+            <th colspan="1"></th>
+            <th>Submission Date</th>
             <th>Company Name</th>
-            <th>Date Applied</th>
-            <th>Listing URL</th>
-            <th>Application URL</th>
+            <th>Company Website URL</th>
+            <th>Position Title</th>
+            <th>Position Listing URL</th>
+            <th>Quick Note</th>
+      <!--  <th>Application URL</th>
             <th>Resume URL</th>
-            <th>Cover Letter URL</th>
-            <th>Notes</th>
-            <th colspan="3"></th>
+            <th>Cover Letter URL</th> -->
+         <!--    <th>Quick Notes</th> -->
+            <th colspan="1"></th> <!-- edit/more info column -->
           </tr>
         </thead>
 
         <tbody>
           <% @jobs.each do |job| %>
             <tr>
-              <td><%= job.job_title %></td>
+               <td><%= link_to '(x)', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= job.app_dt %></td>
               <td><%= job.co_name %></td>
-              <td><%= job.date_applied %></td>
-              <td><%= job.listing_url %></td>
-              <td><%= job.application_url %></td>
-              <td><%= job.resume_url %></td>
-              <td><%= job.coverletter_url %></td>
-              <td><%= job.notes %></td>
-              <td><%= link_to 'Show', job %></td>
-              <td><%= link_to 'Edit', edit_job_path(job) %></td>
-              <td><%= link_to 'Remove', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= job.co_url %></td>
+              <td><%= job.job_title %></td>
+              <td><%= job.list_url %></td>
+              <td><%= job.note %></td>
+
+      <!--    <td><%= job.app_url %></td>
+              <td><%= job.res_url %></td>
+              <td><%= job.cover_url %></td> -->
+     <!--          <td><%= job.notes %></td> -->
+              <td><%= link_to 'Edit / More Info', job %></td>
+      <!--    <td><%= link_to 'Edit Job', edit_job_path(job) %></td> -->
+           
             </tr>
           <% end %>
         </tbody>
       </table>  
 
-    <br>
-    <%= link_to 'New Job', new_job_path %>
     <br><br>
 
 </div>

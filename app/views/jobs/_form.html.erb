@@ -18,39 +18,48 @@
 <div class="container">
 
     <div class="field">
-      <%= f.label :job_title, "Job Title:" %><br>
-      <%= f.text_field :job_title %>
+      <%= f.label :app_dt, "Submission Date:" %><br>
+      <%= f.text_field :app_dt %>
     </div>
     <div class="field">
       <%= f.label :co_name, "Company Name:" %><br>
       <%= f.text_field :co_name %>
     </div>
     <div class="field">
-      <%= f.label :date_applied, "Date of Application Submission:" %><br>
-      <%= f.text_field :date_applied %>
+      <%= f.label :co_url, "Company Website URL:" %><br>
+      <%= f.text_field :co_url %>
     </div>
     <div class="field">
-      <%= f.label :listing_url, "Job Post URL:" %><br>
-      <%= f.text_field :listing_url %>
+      <%= f.label :job_title, "Position Title:" %><br>
+      <%= f.text_field :job_title %>
     </div>
     <div class="field">
-      <%= f.label :application_url, "Application Site URL:" %><br>
-      <%= f.text_field :application_url %>
+      <%= f.label :list_url, "Position Listing URL:" %><br>
+      <%= f.text_field :list_url %>
     </div>
     <div class="field">
-      <%= f.label :resume_url, "Link to Resume Version Submitted:" %><br>
-      <%= f.text_field :resume_url%>
+      <%= f.label :app_url, "Application URL:" %><br>
+      <%= f.text_field :app_url %>
     </div>
     <div class="field">
-      <%= f.label :coverletter_url, "Link to Cover Letter Submitted:" %><br>
-      <%= f.text_field :coverletter_url%>
+      <%= f.label :note, "Quick Note:" %><br>
+      <%= f.text_field :note %>
     </div>
     <div class="field">
-      <%= f.label :notes, "Notes:" %><br>
+      <%= f.label :res_url, "Link to Resume Version Submitted:" %><br>
+      <%= f.text_field :res_url %>
+    </div>
+    <div class="field">
+      <%= f.label :cover_url, "Link to Cover Letter Version Submitted:" %><br>
+      <%= f.text_field :cover_url %>
+    </div>
+    <div class="field">
+      <%= f.label :notes, "Extended Notes:" %><br>
       <%= f.text_field :notes %>
     </div>
     <div class="actions">
       <%= f.submit %>
     </div>
   <% end %>
+
 </div>

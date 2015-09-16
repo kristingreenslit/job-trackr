@@ -9,11 +9,11 @@
 
 <div class="container">
 
-	<h2>Edit Job</h2>
+	<h2>Edit Job: <%= @job.job_title %> at <%= @job.co_name %></h2>
 	<%= render 'form' %>
 	<br>
-	<%= link_to 'Show', @job %> |
-	<%= link_to 'Back', jobs_path %>
+	<%= link_to 'All Jobs', jobs_path %>
+	
 	<br><br>
 
 </div>

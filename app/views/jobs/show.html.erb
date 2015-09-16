@@ -9,47 +9,47 @@
 
 <div class="container">
 
-  <h2>Show Job</h2>
+  <h2><%= @job.job_title %> at <%= @job.co_name %></h2>
 
   <div class="container">
 
   <p>
-    <strong>Job Title:</strong>
-    <%= @job.job_title %>
+    <strong>Submission Date:</strong>
+    <%= @job.app_dt %>
   </p>
 
   <p>
-    <strong>Company Name:</strong>
-    <%= @job.co_name %>
+    <strong>Company Website URL:</strong>
+    <%= @job.co_url %>
   </p>
 
   <p>
-    <strong>Date Applied:</strong>
-    <%= @job.date_applied %>
+    <strong>Position Listing URL:</strong>
+    <%= @job.list_url %>
+  </p>
+
+   <p>
+    <strong>Application URL:</strong>
+    <%= @job.app_url %>
   </p>
 
   <p>
-    <strong>Listing URL:</strong>
-    <%= @job.listing_url %>
+    <strong>Quick Note:</strong>
+    <%= @job.note%>
   </p>
 
   <p>
-    <strong>Application Site URL:</strong>
-    <%= @job.application_url %>
+    <strong>Link to Resume Version Submitted:</strong>
+    <%= @job.res_url %>
   </p>
 
   <p>
-    <strong>Resume URL:</strong>
-    <%= @job.resume_url %>
+    <strong>Link to Cover Letter Submitted:</strong>
+    <%= @job.cover_url %>
   </p>
 
   <p>
-    <strong>Cover Letter URL:</strong>
-    <%= @job.coverletter_url %>
-  </p>
-
-  <p>
-    <strong>Notes:</strong>
+    <strong>Extended Notes:</strong>
     <%= @job.notes %>
   </p>
 
@@ -57,8 +57,8 @@
 
   <br>
 
-  <%= link_to 'Edit', edit_job_path(@job) %> |
-  <%= link_to 'Back', jobs_path %>
+  <%= link_to 'Edit Job', edit_job_path(@job) %> |
+  <%= link_to 'All Jobs', jobs_path %>
 
   <br><br>
 
