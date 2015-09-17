@@ -1,3 +1,11 @@
+<body style="background-color: #C4EBF2">
+  <div id="main-nav">
+    <div id="masthead"><a href="/">Job Trackr</a></div>
+  </div>
+
+<div id="tagline">Edit Job Information</div>
+
+
 <div class="login-status">
 
   <% if current_user %>
@@ -9,11 +17,17 @@
 
 <div class="container">
 
-	<h2>Edit Job: <%= @job.job_title %> at <%= @job.co_name %></h2>
+	<h2><%= @job.job_title %> at <%= @job.co_name %></h2>
 	<%= render 'form' %>
-	<br>
+
+</div>
+
+<div class="container-small">
+
 	<%= link_to 'All Jobs', jobs_path %>
 	
 	<br><br>
 
 </div>
+
+</body>

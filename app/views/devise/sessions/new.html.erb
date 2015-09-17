@@ -1,8 +1,16 @@
+<body style="background-color: #C4EBF2">
+  <div id="main-nav">
+    <div id="masthead"><a href="/">Job Trackr</a></div>
+  </div>
+
+<div id="tagline">Log In</div>
+
 <br><br><br>
 <div class="container-small">
-<h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <br>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -20,6 +28,8 @@
     </div>
   <% end -%>
 
+<br>
+
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
@@ -28,3 +38,5 @@
 <%= render "devise/shared/links" %>
 <br><br>
 </div>
+
+</body>

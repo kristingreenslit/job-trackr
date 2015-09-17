@@ -1,3 +1,10 @@
+<body style="background-color: #C4EBF2">
+  <div id="main-nav">
+    <div id="masthead"><a href="/">Job Trackr</a></div>
+  </div>
+
+<div id="tagline">Job Information</div>
+
 <div class="login-status">
 
   <% if current_user %>
@@ -33,10 +40,10 @@
     <%= @job.app_url %>
   </p>
 
-  <p>
+<!--   <p>
     <strong>Quick Note:</strong>
     <%= @job.note%>
-  </p>
+  </p> -->
 
   <p>
     <strong>Link to Resume Version Submitted:</strong>
@@ -57,8 +64,12 @@
 
   <br>
 
+  <div class="container-small">
+
   <%= link_to 'Edit Job', edit_job_path(@job) %> |
   <%= link_to 'All Jobs', jobs_path %>
+
+  </div>
 
   <br><br>
 
