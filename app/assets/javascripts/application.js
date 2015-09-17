@@ -18,6 +18,6 @@
 
 $(document).ready(function(){
 
-	$("tr.alt:odd").css("background-color", "#efefef");
+	$("tr.alt:even").css("background-color", "#efefef");
 
 });

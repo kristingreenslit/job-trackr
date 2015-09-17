@@ -39,9 +39,9 @@
               <td><%= link_to '(x)', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               <td><%= job.app_dt %></td>
               <td><%= job.co_name %></td>
-              <td><a href="http://<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
+              <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
               <td><%= job.job_title %></td>
-              <td><a href="http://<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>
+              <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>
               <td><%= job.note %></td>
       <!--    <td><%= job.app_url %></td>
               <td><%= job.res_url %></td>

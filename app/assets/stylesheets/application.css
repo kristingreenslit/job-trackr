@@ -44,7 +44,8 @@ table {
   /* eliminates spaces in border-bottom between table data items */
   padding: 5px;
   text-align: left;
-  background-color: white; }
+  background-color: white;
+  border: 1px solid #666; }
 
 th {
   border-bottom: 2px solid gray;
