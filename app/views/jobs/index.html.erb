@@ -24,7 +24,6 @@
             <th>Company Website URL</th>
             <th>Position Title</th>
             <th>Position Listing URL</th>
-            <th>Quick Note</th>
       <!--  <th>Application URL</th>
             <th>Resume URL</th>
             <th>Cover Letter URL</th> -->
@@ -35,25 +34,25 @@
 
         <tbody>
           <% @jobs.each do |job| %>
+
             <tr class="alt">
               <td><%= link_to '(x)', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <td><%= job.app_dt %></td>
+              <td class="time"><%=time_ago_in_words(job.app_dt)%> ago</td>
               <td><%= job.co_name %></td>
               <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
               <td><%= job.job_title %></td>
-              <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>
-              <td><%= job.note %></td>
+              <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>  
       <!--    <td><%= job.app_url %></td>
               <td><%= job.res_url %></td>
               <td><%= job.cover_url %></td> -->
      <!--          <td><%= job.notes %></td> -->
               <td><%= link_to 'Edit / More Info', job %></td>
       <!--    <td><%= link_to 'Edit Job', edit_job_path(job) %></td> -->
-           
             </tr>
           <% end %>
         </tbody>
       </table>  
+
 
     <br><br>
 

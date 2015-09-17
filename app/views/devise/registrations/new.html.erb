@@ -3,7 +3,7 @@
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <h5><%= devise_error_messages! %></h5>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -23,11 +23,14 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <br>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
+<br>
 <%= render "devise/shared/links" %>
 <br>
 </div>
