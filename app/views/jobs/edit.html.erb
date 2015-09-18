@@ -1,7 +1,6 @@
-<body style="background-color: #C4EBF2">
+<body style="background-color: #c4ebf2">
   <div id="main-nav">
-    <div id="masthead"><a href="/">Job Trackr</a></div>
-  </div>
+  <div id="masthead"><a href="/">Job Trackr</a></div>
 
   <div id="tagline">Edit <%= @job.job_title %> at <%= @job.co_name %></div>
 
@@ -11,12 +10,14 @@
     <% end %>
     <p id="notice"><%= notice %></p>
   </div>
+</div>
+
 
   <div class="container">
     <br><br>
     	<%= render 'form' %>
     <br>
-    <div class="container-small">
+    <div class="container-medium">
     	<%= link_to 'All Jobs', jobs_path %>
     </div>
 

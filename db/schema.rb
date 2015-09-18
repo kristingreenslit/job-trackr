@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20150912234639) do
     t.string   "co_url"
     t.string   "job_title"
     t.string   "list_url"
-    t.string   "note"
     t.string   "app_url"
     t.string   "res_url"
     t.string   "cover_url"
