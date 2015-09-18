@@ -1,20 +1,29 @@
-<div class="login-status">
+<body style="background-color: #C4EBF2">
+    <div id="main-nav">
+      <div id="masthead"><a href="/">Job Trackr</a></div>
+    </div>
 
-  <% if current_user %>
-    <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
-  <% end %>
-  <p id="notice"><%= notice %></p>
+	<div id="tagline">New Job Application</div>
 
-</div>
+	<div class="login-status">
 
-<div class="container">
+	<% if current_user %>
+		<li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
+		<% end %>
+	 	<p id="notice"><%= notice %></p>
 
-	<h2>New Application</h2>
-	<%= render 'form' %>
+	</div>
+
+	<div class="container">
 	<br>
-	<%= link_to 'All Jobs', jobs_path %>
+		<%= render 'form' %>
+		<br>
+		<div class="container-small">
+		<%= link_to 'All Jobs', jobs_path %>
+		</div>
 
 	<br><br>
 
-</div>
+	</div>
+</body>
 

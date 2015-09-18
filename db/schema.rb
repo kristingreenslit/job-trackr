@@ -27,9 +27,9 @@ ActiveRecord::Schema.define(version: 20150912234639) do
     t.string   "app_url"
     t.string   "res_url"
     t.string   "cover_url"
-    t.string   "notes"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.text     "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

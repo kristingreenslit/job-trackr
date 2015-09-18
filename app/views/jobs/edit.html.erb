@@ -3,31 +3,25 @@
     <div id="masthead"><a href="/">Job Trackr</a></div>
   </div>
 
-<div id="tagline">Edit Job Information</div>
+  <div id="tagline">Edit <%= @job.job_title %> at <%= @job.co_name %></div>
 
+  <div class="login-status">
+    <% if current_user %>
+      <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
+    <% end %>
+    <p id="notice"><%= notice %></p>
+  </div>
 
-<div class="login-status">
+  <div class="container">
+    <br><br>
+    	<%= render 'form' %>
+    <br>
+    <div class="container-small">
+    	<%= link_to 'All Jobs', jobs_path %>
+    </div>
 
-  <% if current_user %>
-    <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
-  <% end %>
-  <p id="notice"><%= notice %></p>
+    <br><br>
 
-</div>
+  </div>
 
-<div class="container">
-
-	<h2><%= @job.job_title %> at <%= @job.co_name %></h2>
-	<%= render 'form' %>
-
-</div>
-
-<div class="container-small">
-
-	<%= link_to 'All Jobs', jobs_path %>
-	
-	<br><br>
-
-</div>
-
-</body>
+  </body>

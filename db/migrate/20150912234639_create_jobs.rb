@@ -11,7 +11,7 @@ class CreateJobs < ActiveRecord::Migration
       t.string :app_url
       t.string :res_url
       t.string :cover_url
-      t.string :notes
+      t.text   :notes
       t.timestamps null: false
     end
   end

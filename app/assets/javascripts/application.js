@@ -16,8 +16,8 @@
 //= require_tree .
 
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-	$("tr.alt:even").css("background-color", "#efefef");
+// 	$("tr.alt:even").css("background-color", "#d7d7d7");
 
-});
+// });

@@ -1,76 +1,72 @@
 <body style="background-color: #C4EBF2">
-  <div id="main-nav">
-    <div id="masthead"><a href="/">Job Trackr</a></div>
+    <div id="main-nav">
+      <div id="masthead"><a href="/">Job Trackr</a></div>
+    </div>
+
+  <div id="tagline"><%= @job.job_title %> at <%= @job.co_name %></div>
+
+  <div class="login-status">
+
+    <% if current_user %>
+      <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
+    <% end %>
+    <p id="notice"><%= notice %></p>
+
   </div>
-
-<div id="tagline">Job Information</div>
-
-<div class="login-status">
-
-  <% if current_user %>
-    <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
-  <% end %>
-  <p id="notice"><%= notice %></p>
-
-</div>
-
-<div class="container">
-
-  <h2><%= @job.job_title %> at <%= @job.co_name %></h2>
 
   <div class="container">
 
-  <p>
-    <strong>Submission Date:</strong>
-    <%= @job.app_dt %>
-  </p>
-
-  <p>
-    <strong>Company Website URL:</strong>
-    <%= @job.co_url %>
-  </p>
-
-  <p>
-    <strong>Position Listing URL:</strong>
-    <%= @job.list_url %>
-  </p>
-
-   <p>
-    <strong>Application URL:</strong>
-    <%= @job.app_url %>
-  </p>
-
-<!--   <p>
-    <strong>Quick Note:</strong>
-    <%= @job.note%>
-  </p> -->
-
-  <p>
-    <strong>Link to Resume Version Submitted:</strong>
-    <%= @job.res_url %>
-  </p>
-
-  <p>
-    <strong>Link to Cover Letter Submitted:</strong>
-    <%= @job.cover_url %>
-  </p>
-
-  <p>
-    <strong>Extended Notes:</strong>
-    <%= @job.notes %>
-  </p>
-
-  </div>
-
-  <br>
-
-  <div class="container-small">
-
-  <%= link_to 'Edit Job', edit_job_path(@job) %> |
-  <%= link_to 'All Jobs', jobs_path %>
-
-  </div>
-
   <br><br>
 
-</div>
+    <div class="container">
+
+    <p>
+      <strong>Submission Date:</strong>
+      <%= @job.app_dt %>
+    </p>
+
+    <p>
+      <strong>Company Website URL:</strong>
+      <a href="<%=@job.co_url%>" target="_blank"><%=@job.co_url%></a>
+    </p>
+
+    <p>
+      <strong>Position Listing URL:</strong>
+      <a href="<%=@job.list_url%>" target="_blank"><%=@job.list_url%></a>
+    </p>
+
+     <p>
+      <strong>Application URL:</strong>
+      <a href="<%=@job.app_url%>" target="_blank"><%=@job.app_url%></a>
+    </p>
+
+    <p>
+      <strong>Link to Resume Version Submitted:</strong>
+      <a href="<%=@job.res_url%>" target="_blank"><%=@job.res_url%></a>
+    </p>
+
+    <p>
+      <strong>Link to Cover Letter Submitted:</strong>
+      <a href="<%=@job.cover_url%>" target="_blank"><%=@job.cover_url%></a>
+    </p>
+
+    <p>
+      <strong>Extended Notes:</strong>
+      <%= @job.notes %>
+    </p>
+
+    </div>
+
+    <br>
+
+    <div class="container-small">
+
+    <%= link_to 'Edit Job', edit_job_path(@job) %> |
+    <%= link_to 'All Jobs', jobs_path %>
+
+    </div>
+
+    <br>
+
+  </div>
+</body>

@@ -1,76 +1,65 @@
 <body style="background-color: #C4EBF2">
-  <div id="main-nav">
-    <div id="masthead"><a href="/">Job Trackr</a></div>
+
+    <div id="main-nav">
+      <div id="masthead"><a href="/">Job Trackr</a></div>
+    </div>
+
+  <div id="tagline">Job Applications</div>
+
+  <div class="login-status">
+
+    <% if current_user %>
+      <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
+    <% end %>
+    <p id="notice"><%= notice %></p>
+
   </div>
 
-<div id="tagline">Job Applications</div>
+  <br>
 
+  <div class="container">
 
+  <br>
 
-<div class="login-status">
+  <div class="container-small">
+      <%= link_to '(+) New Application', new_job_path %>
+  </div>
 
-  <% if current_user %>
-    <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
-  <% end %>
-  <p id="notice"><%= notice %></p>
+  <br><br>
 
-</div>
-
-<br>
-
-<div class="container">
-
-<br>
-
-<div class="container-small">
-    <%= link_to '(+) New Application', new_job_path %>
-</div>
-    <br><br>
-
-      <table>
-        <thead>
-          <tr>
-            <th colspan="1"></th>  <!-- delete column -->
-            <th>Submission Date</th>
-            <th>Company Name</th>
-            <th>Company Website URL</th>
-            <th>Position Title</th>
-            <th>Position Listing URL</th>
-      <!--  <th>Application URL</th>
-            <th>Resume URL</th>
-            <th>Cover Letter URL</th> -->
-         <!--    <th>Quick Notes</th> -->
-            <th colspan="1"></th> <!-- edit/more info column -->
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @jobs.each do |job| %>
-
-            <tr class="alt">
-              <td><%= link_to '(x)', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <td class="time"><%=time_ago_in_words(job.app_dt)%> ago</td>
-              <td><%= job.co_name %></td>
-              <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
-              <td><%= job.job_title %></td>
-              <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>  
-      <!--    <td><%= job.app_url %></td>
-              <td><%= job.res_url %></td>
-              <td><%= job.cover_url %></td> -->
-     <!--          <td><%= job.notes %></td> -->
-              <td><%= link_to 'Edit / More Info', job %></td>
-      <!--    <td><%= link_to 'Edit Job', edit_job_path(job) %></td> -->
+        <table>
+          <thead>
+            <tr>
+              <th colspan="1"></th>  <!-- delete column -->
+              <th>Submission Date</th>
+              <th>Company Name</th>
+              <th>Company Website URL</th>
+              <th>Position Title</th>
+              <th>Position Listing URL</th>
+              <th colspan="1"></th> <!-- edit/more info column -->
             </tr>
-          <% end %>
-        </tbody>
-      </table>  
+          </thead>
 
+          <tbody>
+            <% @jobs.each do |job| %>
 
-    <br><br><br>
+              <tr class="alt">
+                <td><%= link_to '(x)', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td class="time"><%=time_ago_in_words(job.app_dt)%> ago</td>
+                <td><%= job.co_name %></td>
+                <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
+                <td><%= job.job_title %></td>
+                <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>  
+                <td><%= link_to 'Edit / More Info', job %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>  
 
-</div>
+      <br><br><br>
 
-
+  </div>
+</body>
 
 
 

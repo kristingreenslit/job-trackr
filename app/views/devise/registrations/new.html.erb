@@ -12,7 +12,7 @@
   <h5><%= devise_error_messages! %></h5>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -25,14 +25,14 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <br>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign Up" %>
   </div>
 <% end %>
 
