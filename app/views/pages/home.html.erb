@@ -1,26 +1,28 @@
 <body background="/assets/business_female.jpg">
 
 	<div id="main-nav">
-	<div id="masthead"><a href="/">Job Trackr</a></div>
+		<div id="masthead"><a href="/">Job Trackr</a></div>
 
 
-	<div id="tagline">Career Search Task Manager</div>
+		<div id="tagline">Career Search Task Manager</div>
 
-	<div id="home-buttons">
-		<div id="home-button2"><a href="/accounts/sign_up">Sign Up</a></div>
-		<div id="home-button1"><a href="/accounts/sign_in">Sign In</a></div>
+		<div id="home-buttons">
+			<div id="home-button2"><a href="/accounts/sign_up">Sign Up</a></div>
+			<div id="home-button1"><a href="/accounts/sign_in">Sign In</a></div>
+		</div>
+
 	</div>
-</div>
+
+	<div id="notices">
+		<div class="login-status">
+		    <% if current_user %>
+		      <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
+		    <% end %>
+		</div>
+		<p id="notice"><%= notice %></p>
+	</div>
+
 <br><br>
-<!-- 	<div class="login-status">
-
-	    <% if current_user %>
-	      <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
-	    <% end %>
-
-    	<p id="notice"><%= notice %></p>
-
-  	</div> -->
 
 </body>
 

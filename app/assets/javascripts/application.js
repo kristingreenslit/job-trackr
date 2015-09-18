@@ -16,8 +16,10 @@
 //= require_tree .
 
 
-// $(document).ready(function(){
 
-// 	$("tr.alt:even").css("background-color", "#d7d7d7");
+$(document).ready(ready)
+$(document).on('page:load', ready) // for turbolinks
 
-// });
+function ready(){
+	// $("tr.alt:even").css("background-color", "#d7d7d7");
+};

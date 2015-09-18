@@ -5,11 +5,12 @@
   <div id="tagline"><%= @job.job_title %> at <%= @job.co_name %></div>
 
   <div class="login-status">
-
+  
+    <p id="notice"><%= notice %></p>
     <% if current_user %>
       <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
     <% end %>
-    <p id="notice"><%= notice %></p>
+    
 
   </div>
 </div>
