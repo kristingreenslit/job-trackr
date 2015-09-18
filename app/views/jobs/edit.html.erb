@@ -1,16 +1,17 @@
 <body style="background-color: #c4ebf2">
   <div id="main-nav">
-  <div id="masthead"><a href="/">Job Trackr</a></div>
-
-  <div id="tagline">Edit <%= @job.job_title %> at <%= @job.co_name %></div>
-
-  <div class="login-status">
-    <% if current_user %>
-      <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
-    <% end %>
-    <p id="notice"><%= notice %></p>
+    <div id="masthead"><a href="/">Job Trackr</a></div>
+    <div id="tagline">Edit <%= @job.job_title %> at <%= @job.co_name %></div>
   </div>
-</div>
+
+  <div id="notices-jobs">
+    <div class="login-status-jobs">
+        <% if current_user %>
+          <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
+        <% end %>
+    </div>
+    <p id="notice-jobs"><%= notice %></p>
+  </div>
 
 
   <div class="container">

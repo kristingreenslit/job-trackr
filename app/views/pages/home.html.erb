@@ -1,9 +1,7 @@
 <body background="/assets/business_female.jpg">
 
 	<div id="main-nav">
-		<div id="masthead"><a href="/">Job Trackr</a></div>
-
-
+		<div id="masthead">Job Trackr</div>
 		<div id="tagline">Career Search Task Manager</div>
 
 		<div id="home-buttons">
@@ -13,7 +11,7 @@
 
 	</div>
 
-	<div id="notices">
+	<div id="notices-home">
 		<div class="login-status">
 		    <% if current_user %>
 		      <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>

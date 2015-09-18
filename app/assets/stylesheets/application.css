@@ -170,10 +170,26 @@ ul {
 #notice {
   text-align: right;
   color: #ab171e;
+  text-transform: capitalize;
+  margin-bottom: 3px;
 }
 
-#notices {
-  margin-top: 2px;
+#notices-home {
+  margin-top: 20px;
+  margin-right: 15px;
+}
+
+#notice-jobs {
+  margin-top: -38px;
+  color: #ab171e;
+  margin-bottom: 80px;
+}
+
+#notices-jobs {
+  margin-right: 15px;
+  margin-top: -47px;
+  text-align: right;
+  margin-bottom: 5px;
 }
 
 #tagline {
@@ -214,7 +230,7 @@ ul {
 
 .container {
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 50px;
   text-align: left;
   background-color: rgba(255, 255, 255, 0.70);
   width: 90%;
@@ -267,10 +283,15 @@ ul {
   margin-top: -15px;
 /*  margin-left: 15px;*/
   text-align: right;
-  margin-right: 15px;
+/*  margin-right: 15px;*/
   margin-bottom: 5px;
   color: #5b5b5b;
   font-weight: 500;
+}
+
+.login-status-jobs{
+  margin-top: 23px;
+  margin-bottom: 5px;
 }
 
 .time {
@@ -325,7 +346,21 @@ ul {
     margin-top: 5px;
   }
 
-  #notices {
+  #notice-jobs {
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 131px;
+    background-color: rgba(255, 255, 255, 0.80);
+    margin-bottom: -40px;
+  }
+
+  #notices-jobs {
+    margin-top: -25px;
+    margin-left: 1px;
+  }
+
+  #notices-home {
     margin-top: -25px;
     margin-left: 17px;
   }
@@ -348,6 +383,13 @@ ul {
     text-align: left;
     margin-top: 5px;
 /*    border: 1px solid blue;*/
+  }
+
+  .login-status-jobs{
+    margin-top: -5px;
+    margin-bottom: 5px;
+    text-align: left;
+    margin-left: 15px;
   }
 
 }
