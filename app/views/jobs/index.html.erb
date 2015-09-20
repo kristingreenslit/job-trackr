@@ -2,8 +2,8 @@
 
   <div id="main-nav">
 
-    <div id="masthead"><a href="/">Job Trackr</a></div>
-    <div id="tagline">Job Applications</div>
+    <div id="masthead">Job Trackr</a></div>
+    <div id="tagline">My Job Applications</div>
 
   </div>
 
@@ -23,7 +23,7 @@
   <br>
 
     <div class="container-medium">
-        <%= link_to '(+) New Application', new_job_path %>
+        <%= link_to '(+) Create New', new_job_path %>
     </div>
 
   <br>
@@ -32,13 +32,12 @@
       
         <thead>
           <tr>
-            <th colspan="1"></th>  <!-- for delete column -->
             <th>Submission Date</th>
             <th>Company Name</th>
-            <th>Company Website URL</th>
             <th>Position Title</th>
+            <th>Company Website URL</th>
             <th>Position Listing URL</th>
-            <th colspan="1"></th> <!-- for edit/more info column -->
+            <th colspan="1"></th> <!-- for more info column -->
           </tr>
         </thead>
 
@@ -47,13 +46,12 @@
           <% @jobs.each do |job| %>
 
             <tr class="alt">
-              <td><%= link_to '(x)', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              <td><%=job.app_dt%></td>
+              <td><%= job.app_dt %></td>
               <td><%= job.co_name %></td>
-              <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
               <td><%= job.job_title %></td>
+              <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
               <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>  
-              <td><%= link_to 'Edit / More Info', job %></td>
+              <td><%= link_to 'More Info', job %></td>
             </tr>
 
           <% end %>

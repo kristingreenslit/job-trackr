@@ -13,8 +13,8 @@
     <% end %>
 
     <div class="field">
-      <%= f.label :app_dt, "Submission Date: (YYYY-DD-MM)" %><br>
-      <%= f.text_field :app_dt %>
+      <%= f.label :app_dt, "Submission Date:" %><br>
+      <%= f.date_field :app_dt, :required => true %>
     </div>
     <div class="field">
       <%= f.label :co_name, "Company Name:" %><br>
@@ -55,9 +55,7 @@
         <%= f.submit %>
     </div>
 
-  <br>
+<!--   <br> -->
 
   <% end %>
-
-
 </body>

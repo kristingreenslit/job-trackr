@@ -1,16 +1,15 @@
 <body style="background-color: #95d1dc">
   <div id="main-nav">
-  <div id="masthead"><a href="/">Job Trackr</a></div>
-  <div id="tagline">Log In</div>
-</div>
+    <div id="masthead"><a href="/">Job Trackr</a></div>
+    <div id="tagline">Log In</div>
+  </div>
 
   <br><br><br>
 
   <div class="container-small">
 
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
-  <br>
+  <h5><%= devise_error_messages! %></h5>
     
     <div class="field">
       <%= f.label :email %>

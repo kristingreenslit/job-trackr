@@ -1,29 +1,43 @@
 <body style="background-color: #c4ebf2">
+
   <div id="main-nav">
+
     <div id="masthead"><a href="/">Job Trackr</a></div>
     <div id="tagline">Edit <%= @job.job_title %> at <%= @job.co_name %></div>
+
   </div>
 
   <div id="notices-jobs">
+
     <div class="login-status-jobs">
+
         <% if current_user %>
           <li><%= link_to "Signout ( #{current_user.email} )", destroy_user_session_path, :method => :delete %></li>
         <% end %>
-    </div>
-    <p id="notice-jobs"><%= notice %></p>
-  </div>
 
+    </div>
+
+    <p id="notice-jobs"><%= notice %></p>
+
+  </div>
 
   <div class="container">
-    <br><br>
-    	<%= render 'form' %>
+
     <br>
+
     <div class="container-medium">
-    	<%= link_to 'All Jobs', jobs_path %>
+      <%= link_to 'Cancel', @job %> |
+      <%= link_to 'View All Jobs', jobs_path %>
     </div>
 
-    <br><br>
+    <%= render 'form' %>
+
+    <div class="container-medium">
+    	<%= link_to 'Cancel', @job %>
+    </div>
+
+    <br>
 
   </div>
 
-  </body>
+</body>

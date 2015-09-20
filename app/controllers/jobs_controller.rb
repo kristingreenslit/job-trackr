@@ -4,28 +4,29 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = current_user.jobs
   end
 
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @jobs = current_user.jobs.find(params[:id])
   end
 
   # GET /jobs/new
   def new
-    @job = Job.new
+    @job = current_user.jobs.build
   end
 
   # GET /jobs/1/edit
   def edit
+    @job = current_user.jobs.find(params[:id])
   end
 
   # POST /jobs
   # POST /jobs.json
   def create
-    @job = Job.new(job_params)
-
+    @job = current_user.jobs.build(job_params)
     respond_to do |format|
       if @job.save
         format.html { redirect_to @job, notice: 'Job was successfully created.' }
@@ -40,6 +41,7 @@ class JobsController < ApplicationController
   # PATCH/PUT /jobs/1
   # PATCH/PUT /jobs/1.json
   def update
+    @jobs = current_user.jobs.find(params[:id])
     respond_to do |format|
       if @job.update(job_params)
         format.html { redirect_to @job, notice: 'Job was successfully updated.' }
@@ -54,6 +56,7 @@ class JobsController < ApplicationController
   # DELETE /jobs/1
   # DELETE /jobs/1.json
   def destroy
+    @job = current_user.jobs.find(params[:id])
     @job.destroy
     respond_to do |format|
       format.html { redirect_to jobs_url, notice: 'Job was successfully destroyed.' }
@@ -62,12 +65,11 @@ class JobsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # callback to share common setup or constraints between actions
     def set_job
-      @job = Job.find(params[:id])
+      @job = current_user.jobs.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
       params.require(:job).permit(:app_dt, :co_name, :co_url, :job_title, :list_url, :app_url, :res_url, :cover_url, :notes)
     end

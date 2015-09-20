@@ -1,203 +1,215 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
+/* css is in descending order by affected scope (id followed by class, etc.), then alphabetical order */
+
 * {
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
   list-style: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
   height: 100%; /* for background image to have no white space at the bottom regardless of viewport height */
 }
 
-a:link { color: #666; text-decoration: none; }
-a:hover { color: rgba(0,0,0,0.5); }
-a:visited { color: #666; }
 a:active { color: #666; }
+a:hover { color: rgba(0,0,0,0.5); }
+a:link { color: #666; text-decoration: none; }
+a:visited { color: #666; }
 
 body {
   background-color: #eee;
-  font-family: arial, sans-serif;
-  font-size: .8em;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: arial, sans-serif;
   font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: .8em;
   margin: 0 auto;
 }
 
-h2 {  /* devise headings */
-  text-align: center; 
+h2 {  /* flash message headings for sign_in/sign_up */
   color: #5b5b5b;
+  font-size: 12px;
+  padding: 2px;
+  text-align: center; 
   text-transform: capitalize;
 }
 
-ul {
+ul { /* red flash messages for sign_in/sign_up */
+  font-size: 12px;
   margin-right: 40px;
 }
 
 input[type="submit"] {
-  width: 65%;
-  height: 20%;
+  background-color: #95d1dc;
+  border: 2px solid #95d1dc;
+  color: rgba(255,255,255,1);
   font-size: 1.1em;
-  padding: 5px;
+  font-weight: 700;
+  height: 20%;
   margin-top: 2%;
   margin: 0 auto;
-  color: rgba(255,255,255,1);
-  font-weight: 700;
-  border: 2px solid #95d1dc;
-  background-color: #95d1dc;
+  padding: 5px;
+  width: 65%;
 }
 
 input[type="submit"]:hover {
-  color: rgba(255,255,255,.7)
+  color: rgba(255,255,255,.7);
+  cursor: pointer;
 }
 
 input, textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  margin-bottom: 8px;
+  background-color: none;
   border: 1px solid #bfbfbf;
   border-radius: 2px;
   color: gray;
-  background-color: none;
+  margin-bottom: 8px;
+  margin-top: 4px;
+  padding: 8px;
+  width: 100%;
 }
 
 label {
-  text-transform: capitalize;  /* devise input fields */
   font-size: 1.1em;
+  text-transform: capitalize;  /* words above sign_in/sign_up text fields */
 }
 
 table {
-  width: 80%;
+  background-color: rgba(255, 255, 255, 0.60);
+  border: 1px solid #efefef;
+  border-collapse: collapse; /* eliminates spaces in border-bottom between table data items */
   height: 100%;
   margin: 0 auto;
-  border-collapse: collapse; /* eliminates spaces in border-bottom between table data items */
   padding: 5px;
   text-align: left;
-  background-color: rgba(255, 255, 255, 0.60);
+  width: 80%;
  }
-
-th {
-  border-bottom: 2px solid #efefef;
-  padding: 5px;
-  background-color: rgba(255, 255, 255, 0.60);
- }
-
-tr.alt:nth-child(odd) {
-  background-color: #d7d7d7;
-}
-
 
 td {
-  padding: 5px;
-  border-bottom: 1px solid #efefef;
   background-color: rgba(255, 255, 255, 0.60);
+  border-bottom: 1px solid #efefef;
+  font-weight: 300;
+  padding: 5px;
 }
 
-td:nth-child(4), td:nth-child(6) {
-  word-break: break-all;  /* enables word-wrap for urls */
+th {
+  background-color: rgba(255, 255, 255, 0.60);
+  border-bottom: 2px solid #efefef;
+  font-weight: 500;
+  padding: 5px;
+ }
+
+td:nth-child(4), td:nth-child(5) {
+  word-break: break-all;  /* enables word-wrap for urls so table is responsive */
+}
+
+td:nth-child(6) {  /* "More Info" link */
+  font-weight: 500;
+}
+
+td:nth-child(6) :hover {
+  color: rgba(0,0,0,0.4)
+}
+
+tr.alt:nth-child(odd) {  /* zebra striping for job table data */
+  background-color: #d7d7d7; 
 }
 
 ul {
+  font-size: 1.1em;
   text-align: center;
 }
 
-/*#devise-link-signup, #devise-link-forgotpw {
-  border: 2px solid #95d1dc;
-  background-color: white;
-  width: 65%;
-  height: 15%;
-  font-size: 12px;
-  padding: 5px;
-  margin: 0 auto;
-}*/
-
-#error_explanation {  /*wrapper for devise sign_in/sign_out error messages*/
-  width: 100%;
+#error_explanation {  /* wrapper for devise sign_in/sign_out error messages */
   color: red;
-  font-size: 97%;
+  font-size: 11px;
   text-transform: capitalize;
+  width: 100%;
 }
 
 #home-button1, #home-button2 {
-  width: 125px;
-  height: 42px;
-  color: #666;
   background: rgba(255,255,255,.5);
   border: solid 2px #666;
-  font-size: 16px;
-  text-align: center;
-  margin: 10px;
-  padding: 10px 25px;
-  outline: none;
-  text-transform: uppercase;
-  cursor: pointer;
   border-radius: 2px;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  height: 42px;
+  margin: 10px;
+  outline: none;
+  padding: 10px 25px;
+  text-align: center;
+  text-transform: capitalize;
+  width: 125px;
 }
 
 #home-buttons {
   display: flex;
-  display: -webkit-flex;
   display: -ms-flexbox;
-  margin-top: -65px;
-  margin-bottom: 30px;
+  display: -webkit-flex;   /* don't need -moz- prefix */
   justify-content: flex-end;
-  -webkit-justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+  margin-bottom: 30px;
+  margin-top: -65px;
 }
 
 #home-button1:hover, #home-button2:hover {
   color: rgba(255,255,255,0.8);
 }
 
+#job_app_dt {  /* for date picker field in job form */
+  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 #main-nav {
-  height: 80px;
   background-color: rgba(255, 255, 255, 0.70);
+  height: 80px;
   padding: 1px; /* forces navbar to top of viewport */
   margin-bottom: 5px;
 }
 
 #masthead {
+  color: #5b5b5b;
   font-family: 'Raleway', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.7em;
+  font-weight: 700;
   margin-left: 19px;
   margin-top: 5px;
-  font-weight: 700;
-  font-size: 2.7em;
-  color: #5b5b5b;
 }
 
-#notice {
-  text-align: right;
-  color: #ab171e;
-  text-transform: capitalize;
+#notice {  /* red flash messages for devise */
+  color: #ab171e; 
   margin-bottom: 3px;
+  text-align: right;
+  text-transform: capitalize;
 }
 
-#notices-home {
-  margin-top: 20px;
+#notices-home { /* red flash messages for devise on home page */
   margin-right: 15px;
+  margin-top: 20px;
 }
 
-#notice-jobs {
-  margin-top: -38px;
+#notice-jobs {  /* red flash messages for devise after sign_in or sign_up */
   color: #ab171e;
   margin-bottom: 80px;
-}
-
-#notices-jobs {
-  margin-right: 15px;
-  margin-top: -47px;
+  margin-top: -38px;
   text-align: right;
-  margin-bottom: 5px;
+  width: 100%;
 }
 
-#tagline {
-  margin-left: 21px;
-  margin-top: 5px;
+#notices-jobs {  /* container for red flash messages and .login-status */
+  margin: -47px 15px 5px 0px;
+  text-align: right;
+}
+
+#tagline {  /* words below masthead */
   color: #666;
   font-size: 1.4em;
   font-weight: 500;
+  margin-left: 21px;
+  margin-top: 5px;
 }
 
 #user_remember_me {
@@ -206,92 +218,102 @@ ul {
 }
 
 .actions {
-  width: 85%;
-  padding: 8px;
-  margin-top: 4px;
-  margin-bottom: 8px;
+  background-color: none;
   border-radius: 2px;
   color: gray;
-  background-color: none;
   margin: 0 auto;
+  margin-bottom: 8px;
+  margin-top: 4px;
+  padding: 8px;
+  width: 85%;
 }
 
-.field {   /* devise fields and actions */
+.field {   /* text fields for sign_in/sign_up and jobs form */
+  color: #5b5b5b;
   font-size: .9em;
-  text-align: left;
+  font-weight: 500;
+  height: 80%;
   margin-left: 20px;
   margin-top: 5px;
+  text-align: left;
   width: 85%;
-  height: 80%;
-  padding-top: 10px;
-  color: #5b5b5b;
-  font-weight: 500;
 }
 
 .container {
-  margin: 0 auto;
-  margin-top: 50px;
-  text-align: left;
   background-color: rgba(255, 255, 255, 0.70);
-  width: 90%;
-  height: 100%;
-  padding: 1px;
   color: #5b5b5b;
+  font-weight: 700;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 1px;
+  text-align: left;
+  width: 90%;
 }
 
-.container p {
-  margin-left: 5px;
-  margin-right: 5px;
+.container-content {
+  background-color: rgba(255, 255, 255, 0.70);
+  margin: 0 auto;
+  padding: 5px;
+  width: 90%;
+}
+
+.container-content p {  /* for jobs show page */
+  font-weight: 300;
+  margin: 5px 5px 5px 15px;
   word-break: break-all;
 }
 
 .container-medium {
-  margin: 0 auto;
-  text-align: center;
-  width: 35%;
+  background-color: rgba(0,0,0,0);
+  color: #5b5b5b;
   height: 90%;
+  margin: 0 auto;
+  margin-bottom: 15px;
   padding-top: 2px;
   padding-bottom: 2px;
-  color: #5b5b5b;
-  background-color: rgba(0,0,0,0);
+  text-align: center;
+  width: 35%;
+}
+
+.container-medium a:hover {  /* nav links on job pages */
+  color: rgba(0,0,0,0.4);
 }
 
 .container-small {
-  margin: 0 auto;
-  text-align: center;
-  width: 35%;
+  background-color: rgba(255, 255, 255, 0.70);
+  color: #5b5b5b;
   height: 90%;
+  margin: 0 auto;
   padding-top: 2px;
   padding-bottom: 2px;
-  color: #5b5b5b;
-  background-color: rgba(255, 255, 255, 0.70);
+  text-align: center;
+  width: 35%;
 }
 
-.devise-links {     
-  text-align: center;  /* devise/shared/_links.html.erb */
+.devise-links {  /* devise/shared/_links.html.erb */   
   color: #5b5b5b;
   font-weight: 500;
+  text-align: center;  
 }
 
 .field_with_errors {
-  padding: 2px;
   color: red;
+  padding: 2px;
   text-align: left;
 }
 
-.login-status {    /* devise notices */
-  margin-top: -15px;
-/*  margin-left: 15px;*/
-  text-align: right;
-/*  margin-right: 15px;*/
-  margin-bottom: 5px;
+.login-status {    /* devise sign_in/sign_out notices */
   color: #5b5b5b;
   font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: -15px;
+  text-align: right;
 }
 
-.login-status-jobs{
-  margin-top: 23px;
+.login-status-jobs {
   margin-bottom: 5px;
+  margin-top: 23px;
 }
 
 .time {
@@ -300,31 +322,27 @@ ul {
 
 @media only screen and (max-width: 850px) {
 
-  h2 {
-    font-size: 99%;
-  }
-
-  th, td {
+  td, th {
     font-size: 80%;
   }
 
   #home-buttons {
     display: block;
-    margin-top: 35px;
-    margin-left: 6px;
     justify-content: flex-end;
     margin-bottom: 5px;
+    margin-left: 6px;
+    margin-top: 35px;
   }
 
   #home-button1, #home-button2 {
-    width: 100px;
-    height: 38px;
-    color: #666;
-    font-size: 13px;
     background-color: rgba(255, 255, 255, 0.70);
     border: solid 1px #666;
-    padding: 11px;
+    color: #666;
+    font-size: 13px;
     font-weight: 500;
+    height: 38px;
+    padding: 11px;
+    width: 100px;
   }
 
   #main-nav {
@@ -333,42 +351,45 @@ ul {
   }
 
   #masthead {
+    font-size: 2.2em;
     margin-left: 15px;
     margin-top: 5px;
-    font-size: 2.2em;
   }
 
   #notice {
-    text-align: left;
-  /*  border: 1px solid green;*/
-    width: 150px;
     height: 25px;
     margin-top: 5px;
+    text-align: left;
+    width: 150px;
   }
 
-  #notice-jobs {
-    text-align: left;
-    margin-top: 10px;
-    margin-left: 15px;
-    width: 131px;
+  #notice-jobs {  /* red flash messages for devise */
     background-color: rgba(255, 255, 255, 0.80);
     margin-bottom: -40px;
+    margin-left: 15px;
+    margin-top: 10px;
+    text-align: left;
+    width: 350px;
   }
 
   #notices-jobs {
-    margin-top: -25px;
     margin-left: 1px;
+    margin-top: -25px;
   }
 
   #notices-home {
-    margin-top: -25px;
     margin-left: 17px;
+    margin-top: -25px;
   }
 
   #tagline {
-    margin-top: 0px;
-    margin-left: 15px;
     font-size: 1.2em;
+    margin-left: 17px;
+    margin-top: 0px;
+  }
+
+  .container {
+    margin-top: 85px;
   }
 
   .container-small {
@@ -379,17 +400,14 @@ ul {
     width: 75%;
   }
 
-  .login-status {    /* devise notices */
-    text-align: left;
+  .login-status {   /* devise notices */
     margin-top: 5px;
-/*    border: 1px solid blue;*/
+    text-align: left;
   }
 
-  .login-status-jobs{
-    margin-top: -5px;
-    margin-bottom: 5px;
+  .login-status-jobs {
+    margin: -5px 0px 5px 15px;
     text-align: left;
-    margin-left: 15px;
   }
 
 }
