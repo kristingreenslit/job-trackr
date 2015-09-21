@@ -29,7 +29,7 @@ class JobsController < ApplicationController
     @job = current_user.jobs.build(job_params)
     respond_to do |format|
       if @job.save
-        format.html { redirect_to @job, notice: 'Job was successfully created.' }
+        format.html { redirect_to @job, notice: 'Job created successfully' }
         format.json { render :show, status: :created, location: @job }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class JobsController < ApplicationController
     @jobs = current_user.jobs.find(params[:id])
     respond_to do |format|
       if @job.update(job_params)
-        format.html { redirect_to @job, notice: 'Job was successfully updated.' }
+        format.html { redirect_to @job, notice: 'Job updated successfully' }
         format.json { render :show, status: :ok, location: @job }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class JobsController < ApplicationController
     @job = current_user.jobs.find(params[:id])
     @job.destroy
     respond_to do |format|
-      format.html { redirect_to jobs_url, notice: 'Job was successfully destroyed.' }
+      format.html { redirect_to jobs_url, notice: 'Job deleted successfully' }
       format.json { head :no_content }
     end
   end

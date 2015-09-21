@@ -8,37 +8,42 @@
 
   <div class="container-small">
 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <h5><%= devise_error_messages! %></h5>
-    
-    <div class="field">
-      <%= f.label :email %>
-      <%= f.email_field :email, autofocus: true %>
-    </div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
-    <div class="field">
-      <%= f.label :password %>
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
+      <br>
 
-    <% if devise_mapping.rememberable? -%>
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      
       <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me %>
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %>
       </div>
-    <% end -%>
 
-  <br>
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
 
-    <div class="actions">
-      <%= f.submit "Log In" %>
-    </div>
+      <div class="field">
+        <% if devise_mapping.rememberable? -%>
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+        <% end -%>
+      </div>
 
-  <% end %>
+      <br>
 
-  <%= render "devise/shared/links" %>
+      <div class="actions">
+        <%= f.submit "Log In" %>
+      </div>
 
-  <br><br>
+    <% end %>
 
-</div>
+    <%= render "devise/shared/links" %>
+
+    <br><br>
+
+  </div>
 </body>

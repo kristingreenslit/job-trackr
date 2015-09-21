@@ -14,10 +14,10 @@ html {
   height: 100%; /* for background image to have no white space at the bottom regardless of viewport height */
 }
 
-a:active { color: #666; }
-a:hover { color: rgba(0,0,0,0.5); }
 a:link { color: #666; text-decoration: none; }
 a:visited { color: #666; }
+a:hover { color: rgba(0,0,0,0.3); }
+a:active { color: #666; }
 
 body {
   background-color: #eee;
@@ -122,9 +122,11 @@ ul {
   text-align: center;
 }
 
-#error_explanation {  /* wrapper for devise sign_in/sign_out error messages */
+#error_explanation, #flash_alert {  /* wrapper for devise sign_in/sign_out error messages */
   color: red;
   font-size: 11px;
+  font-weight: 500;
+  height: 100%;
   text-transform: capitalize;
   width: 100%;
 }
@@ -412,4 +414,4 @@ ul {
 
 }
 
-/*# sourceMappingURL=application.css.map */
+

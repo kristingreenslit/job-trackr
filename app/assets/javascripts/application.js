@@ -15,8 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
-
-
 $(document).ready(ready)  // prevents turbolinks from interfering with $(document).ready after page redirect
 $(document).on('page:load', ready) 
 
