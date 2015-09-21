@@ -17,9 +17,18 @@
 
 
 
-$(document).ready(ready)
-$(document).on('page:load', ready) // for turbolinks
+$(document).ready(ready)  // prevents turbolinks from interfering with $(document).ready after page redirect
+$(document).on('page:load', ready) 
 
 function ready(){
-	// $("tr.alt:even").css("background-color", "#d7d7d7");
+
+	$(".submit-button").click(function(){  
+		var dateField = $(".date-field");
+			if (dateField !== ""){  /* work-around to improve ux in Safari. Console indicates value in 'f.data_field' despite no support for form helper or built-in visual cues for validations */
+				$(".date-field").css("color", "red");
+			} else {
+				console.log("");
+			}
+	});
+
 };

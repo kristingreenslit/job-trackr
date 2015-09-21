@@ -10,11 +10,11 @@
           <% end %>
           </ul>
       </div>
-    <% end %>
+  <% end %>
 
-    <div class="field">
-      <%= f.label :app_dt, "Submission Date:" %><br>
-      <%= f.date_field :app_dt, :required => true %>
+    <div class="field date-field">
+      <%= f.label :app_dt, "Submission Date: (MM/DD/YYYY)" %><br>
+      <%= f.date_field :app_dt, :required => true, :pattern => '^(((((0[1-9])|(1\d)|(2[0-8]))\/((0[1-9])|(1[0-2])))|((31\/((0[13578])|(1[02])))|((29|30)\/((0[1,3-9])|(1[0-2])))))\/((20[0-9][0-9])|(19[0-9][0-9])))|((29\/02\/(19|20)(([02468][048])|([13579][26]))))$' %>
     </div>
     <div class="field">
       <%= f.label :co_name, "Company Name:" %><br>
@@ -51,7 +51,7 @@
 
   <br>
 
-    <div class="container-medium">
+    <div class="container-medium submit-button">
         <%= f.submit %>
     </div>
 
