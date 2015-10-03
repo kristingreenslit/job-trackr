@@ -94,6 +94,12 @@ td {
   padding: 5px;
 }
 
+/*td a {
+  background-color: rgba(149, 209, 220, 0.9); 
+  color: rgba(0,0,0,0.6);
+  padding: 10px 20px 10px 20px; 
+}*/
+
 th {
   background-color: rgba(255, 255, 255, 0.60);
   border-bottom: 2px solid #efefef;
@@ -270,7 +276,7 @@ ul {
   word-break: break-all;
 }
 
-.container-medium {
+.container-medium, .container-medium-home  {
   background-color: rgba(0,0,0,0);
   color: #5b5b5b;
   height: 100%;
@@ -284,17 +290,28 @@ ul {
 }
 
 .container-medium a:hover {  /* nav links on job pages */
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,.1);
 }
 
 .container-medium a {
-  border: 1px solid gray;
-  color: rgba(0,0,0,0.8);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #666;
+  color: rgba(0,0,0,0.6);
   padding: 10px 20px 10px 20px;
 }
 
 .container-medium a:nth-child(n+2) {
   margin-left: 15px;
+}
+
+.container-medium-home a {  /* nav link on job home page */
+  background-color: rgba(149, 209, 220, 0.9); 
+  color: rgba(0,0,0,0.6);
+  padding: 10px 20px 10px 20px;
+}
+
+.container-medium-home a:hover {  
+  background-color: rgba(149, 209, 220, 0.6); 
 }
 
 .container-small {
@@ -415,6 +432,15 @@ ul {
 
   .container-medium {
     width: 75%;
+  }
+
+  .container-medium a {
+    font-size: 80%;
+    padding: 5px 10px 5px 10px;
+  }
+
+  .container-medium a:nth-child(n+2) {
+  margin-left: 5px;
   }
 
   .login-status {   /* devise notices */
