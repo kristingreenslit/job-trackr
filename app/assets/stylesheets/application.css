@@ -147,6 +147,10 @@ ul {
   width: 125px;
 }
 
+#home-button1:hover, #home-button2:hover {
+   background: rgba(255,255,255,1);
+}
+
 #home-buttons {
   display: flex;
   display: -ms-flexbox;
@@ -235,7 +239,7 @@ ul {
   font-size: .9em;
   font-weight: 500;
   height: 80%;
-  margin-left: 20px;
+  margin:0 auto;
   margin-top: 5px;
   text-align: left;
   width: 85%;
@@ -269,17 +273,28 @@ ul {
 .container-medium {
   background-color: rgba(0,0,0,0);
   color: #5b5b5b;
-  height: 90%;
+  height: 100%;
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  margin-top: 8px;
   padding-top: 2px;
   padding-bottom: 2px;
   text-align: center;
-  width: 35%;
+  width: 100%;
 }
 
 .container-medium a:hover {  /* nav links on job pages */
-  color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.1);
+}
+
+.container-medium a {
+  border: 1px solid gray;
+  color: rgba(0,0,0,0.8);
+  padding: 10px 20px 10px 20px;
+}
+
+.container-medium a:nth-child(n+2) {
+  margin-left: 15px;
 }
 
 .container-small {

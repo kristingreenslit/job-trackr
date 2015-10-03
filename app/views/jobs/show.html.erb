@@ -20,9 +20,10 @@
 
       <div class="container-medium">
 
-        <%= link_to 'Edit', edit_job_path(@job) %> |
-        <%= link_to 'Create New', new_job_path %> |
+        <%= link_to 'Edit', edit_job_path(@job) %>
+        <%= link_to 'Create New', new_job_path %>
         <%= link_to 'View All', jobs_path %>
+        <%= link_to 'Delete', @job, method: :delete, data: { confirm: 'Are you sure you want to delete this job application?' } %>
 
       </div>
 
@@ -76,12 +77,6 @@
     </div>
 
     <br>
-
-    <div class="container-medium">
-
-      <%= link_to 'Delete', @job, method: :delete, data: { confirm: 'Are you sure you want to delete this job application?' } %>
-
-    </div>
 
   </div>
 </body>
