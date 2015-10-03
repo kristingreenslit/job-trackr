@@ -27,7 +27,7 @@
     </div>
 
   <br>
-
+    <div id="table-home">
       <table>
       
         <thead>
@@ -45,13 +45,13 @@
 
           <% @jobs.each do |job| %>
 
-            <tr class="alt">
+            <tr class="content">
               <td><%= job.app_dt %></td>
               <td><%= job.co_name %></td>
               <td><%= job.job_title %></td>
               <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
               <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>  
-              <td><%= link_to 'More Info', job %></td>
+              <td><div id="td-row"><%= link_to 'Edit', edit_job_path(job), :class => "table-button" %><br><br><%= link_to 'View', job, :class => "table-button" %></div></td>
             </tr>
 
           <% end %>
@@ -59,8 +59,8 @@
         </tbody>
       </table>  
 
-    <br><br><br>
-
+      <br><br><br>
+    </div>
   </div>
 </body>
 
