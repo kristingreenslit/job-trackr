@@ -18,12 +18,12 @@
 
   <br>
 
-  <div class="container">
+  <div class="container-home">
 
   <br>
 
     <div class="container-medium-home">
-        <%= link_to 'Create New', new_job_path %>
+        <%= link_to '+ Application', new_job_path %>
     </div>
 
   <br>
@@ -32,10 +32,10 @@
       
         <thead>
           <tr>
-            <th>Submission Date</th>
+            <th>Application Date</th>
             <th>Company Name</th>
             <th>Position Title</th>
-            <th>Company Website URL</th>
+           <!--  <th>Company Website URL</th> -->
             <th>Position Listing URL</th>
             <!-- <th colspan="1"></th> --> <!-- for more info column -->
           </tr>
@@ -50,9 +50,9 @@
                 <td><%= job.app_dt.strftime("%m/%d/%Y") %></td>
                 <td><%= job.co_name %></td>
                 <td><%= job.job_title %></td>
-                <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
+               <!--  <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>    -->
                 <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>  
-                <td><div id="td-row"><%= link_to 'Modify ', edit_job_path(job), :class => "table-button" %><%= link_to 'Details ', job, :class => "table-button" %></div></td>
+                <td><div id="td-row"><%= link_to 'Modify', edit_job_path(job), :class => "table-button" %><%= link_to 'Details', job, :class => "table-button" %></div></td>
               </tr>
             
           <% end %>
@@ -61,7 +61,7 @@
    
       </table>  
 
-     <!--  <br><br><br> -->
+      <br>
     </div>
 
   </div>

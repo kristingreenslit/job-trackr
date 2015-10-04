@@ -45,14 +45,16 @@ ul { /* red flash messages for sign_in/sign_up */
 input[type="submit"] {
   background-color: #95d1dc;
   border: 2px solid #95d1dc;
-  color: rgba(255,255,255,1);
+  /*color: rgba(255,255,255,1);*/
+  color: #5b5b5b;
   font-size: 1.1em;
   font-weight: 700;
   height: 20%;
   margin-top: 2%;
   margin: 0 auto;
   padding: 5px;
-  width: 65%;
+/*  width: 65%;*/
+  width: 200px;
 }
 
 input[type="submit"]:hover {
@@ -77,36 +79,41 @@ label {
 }
 
 table {
-  background-color: rgba(255, 255, 255, 0.60);
+  background-color: rgba(255, 255, 255, 0.70);
   border: 1px solid #efefef;
   border-collapse: collapse; /* eliminates spaces in border-bottom between table data items */
-  /*display: block;*/
- /* height: 100%;*/
   margin: 0 auto;
-  max-height: 375px;
   padding: 5px;
   text-align: left;
   width: 100%;
  }
 
 tbody {
+  display: block;
+  height: 375px;
   overflow-y: auto;
-  height: 100px;
 }
 
 td {
   background-color: rgba(255, 255, 255, 0.60);
-  border-bottom: 1px solid #efefef;
   font-weight: 400;
   padding: 5px;
 }
 
 th {
   background-color: rgba(255, 255, 255, 0.60);
-  border-bottom: 2px solid #efefef;
+  display: block;
+  float: left;
   font-weight: 700;
   padding: 5px;
+  position: relative;
  }
+
+td:nth-child(1), th:nth-child(1) { min-width: 120px; } /* for table headers to line up w/td rows */
+td:nth-child(2), th:nth-child(2) { min-width: 150px; }
+td:nth-child(3), th:nth-child(3) { min-width: 150px; }
+td:nth-child(4), th:nth-child(4) { min-width: 300px; }
+td:nth-child(5), th:nth-child(5) { width: 300%; }
 
 td:nth-child(4), td:nth-child(5) {
   word-break: break-all;  /* enables word-wrap for urls so table is responsive */
@@ -121,7 +128,7 @@ td:nth-child(6) :hover {
 }
 
 tr.content:nth-child(odd) {  /* zebra striping for job table data */
-  background-color: #d7d7d7; 
+  background-color: rgba(215,215,215,.7)
 }
 
 ul {
@@ -139,19 +146,21 @@ ul {
 }
 
 #home-button1, #home-button2 {
-  background: rgba(255,255,255,.5);
-  border: solid 2px #666;
+  border: 2px solid #5b5b5b;
   border-radius: 2px;
-  color: #666;
   cursor: pointer;
   font-size: 16px;
   height: 42px;
   margin: 10px;
   outline: none;
-  padding: 10px 25px;
+  padding: 9px 25px;
   text-align: center;
-  text-transform: capitalize;
+  text-transform: uppercase;
   width: 125px;
+}
+
+#home-button1 a, #home-button2 a {
+   color: #5b5b5b;
 }
 
 #home-button1:hover, #home-button2:hover {
@@ -163,13 +172,10 @@ ul {
   display: -ms-flexbox;
   display: -webkit-flex;   /* don't need -moz- prefix */
   justify-content: flex-end;
-    -webkit-justify-content: flex-end;
+  -webkit-justify-content: flex-end;
   margin-bottom: 30px;
+  margin-right: 10px;
   margin-top: -65px;
-}
-
-#home-button1:hover, #home-button2:hover {
-  color: rgba(255,255,255,0.8);
 }
 
 #job_app_dt {  /* for date picker field in job form */
@@ -177,7 +183,7 @@ ul {
 }
 
 #main-nav {
-  background-color: rgba(255, 255, 255, 0.70);
+  background-color: rgba(255, 255, 255, 0.80);
   height: 80px;
   padding: 1px; /* forces navbar to top of viewport */
   margin-bottom: 5px;
@@ -206,7 +212,7 @@ ul {
 
 #notice-jobs {  /* red flash messages for devise after sign_in or sign_up */
   color: #ab171e;
-  margin-bottom: 80px;
+ /* margin-bottom: 80px;*/
   margin-top: -38px;
   text-align: right;
   width: 100%;
@@ -234,10 +240,12 @@ ul {
   font-size: 10px;
   margin-bottom: 5px;
   margin-top: 5px;
+  text-align: right;
 }
 
 #td-row a { 
-  margin-left: 10px;
+  margin-left: 8px;
+  width: 10%;
 }
 
 #user_remember_me {
@@ -268,20 +276,21 @@ ul {
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.70);
+  background-color: rgba(255, 255, 255, 0);
   color: #5b5b5b;
   font-weight: 700;
   height: 100%;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 55px;
   padding: 1px;
   text-align: left;
   width: 90%;
 }
 
 .container-content {
-  background-color: rgba(255, 255, 255, 0.70);
+  background-color: rgba(255, 255, 255, 0.8);
   margin: 0 auto;
+  margin-top: 30px;
   padding: 5px;
   width: 90%;
 }
@@ -292,26 +301,37 @@ ul {
   word-break: break-all;
 }
 
-.container-medium, .container-medium-home  {
+.container-home {
+  background-color: rgba(255, 255, 255, 0);
+  color: #5b5b5b;
+  font-weight: 700;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 25px;
+  padding: 1px;
+  text-align: left;
+  width: 90%;
+}
+
+.container-medium {
   background-color: rgba(0,0,0,0);
   color: #5b5b5b;
   height: 100%;
   margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 8px;
+  margin-bottom: 10px;
+  margin-top: 5px;
   padding-top: 2px;
-  padding-bottom: 2px;
+  padding-bottom: 5px;
   text-align: center;
   width: 100%;
 }
 
 .container-medium a:hover {  /* nav links on job pages */
-  background-color: rgba(0,0,0,.1);
+  background: rgba(255,255,255,.4);
 }
 
 .container-medium a {
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 1px solid #666;
+  border: 2px solid #666;
   color: rgba(0,0,0,0.6);
   padding: 10px 20px 10px 20px;
 }
@@ -320,14 +340,28 @@ ul {
   margin-left: 15px;
 }
 
+.container-medium-home  {
+  background-color: rgba(0,0,0,0);
+  color: #5b5b5b;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 2px;
+  margin-top: 8px;
+  padding-bottom: 5px;
+  padding-top: 2px;
+  text-align: center;
+  width: 100%;
+}
+
 .container-medium-home a {  /* nav link on job home page */
-  background-color: rgba(149, 209, 220, 0.4); 
+  background-color: #C3EBF3;
   color: rgba(0,0,0,0.6);
+  margin-right: 10px;
   padding: 10px 20px 10px 20px;
 }
 
 .container-medium-home a:hover {  
-  background-color: rgba(149, 209, 220, 0.7); 
+  color: rgba(0,0,0,0.3); 
 }
 
 .container-small {
@@ -367,8 +401,10 @@ ul {
 }
 
 .table-button {
-  background-color: rgba(149, 209, 220, 0.4); 
+  /*background-color: rgba(149, 209, 220, 0.4); */
+  background-color: #C3EBF3;
   color: rgba(0,0,0,0.6);
+  font-size: 12px;
   font-weight: 500;
   padding: 5px 10px 5px 10px; 
 }
@@ -453,8 +489,19 @@ ul {
     margin-top: 0px;
   }
 
+  #td-row {  /* for index row buttons to have space between them */
+    font-size: 10px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+  }
+
+  #td-row a { 
+    margin-left: 5px;
+  }
+
   .container {
-    margin-top: 85px;
+    /*margin-top: 85px;*/
+    width: 100%;
   }
 
   .container-small {
