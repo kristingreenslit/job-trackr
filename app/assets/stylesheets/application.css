@@ -45,7 +45,6 @@ ul { /* red flash messages for sign_in/sign_up */
 input[type="submit"] {
   background-color: #95d1dc;
   border: 2px solid #95d1dc;
-  /*color: rgba(255,255,255,1);*/
   color: #5b5b5b;
   font-size: 1.1em;
   font-weight: 700;
@@ -53,7 +52,6 @@ input[type="submit"] {
   margin-top: 2%;
   margin: 0 auto;
   padding: 5px;
-/*  width: 65%;*/
   width: 200px;
 }
 
@@ -112,10 +110,10 @@ th {
 td:nth-child(1), th:nth-child(1) { min-width: 120px; } /* for table headers to line up w/td rows */
 td:nth-child(2), th:nth-child(2) { min-width: 150px; }
 td:nth-child(3), th:nth-child(3) { min-width: 150px; }
-td:nth-child(4), th:nth-child(4) { min-width: 300px; }
+td:nth-child(4), th:nth-child(4) { min-width: 375px; }
 td:nth-child(5), th:nth-child(5) { width: 300%; }
 
-td:nth-child(4), td:nth-child(5) {
+td:nth-child(4) {
   word-break: break-all;  /* enables word-wrap for urls so table is responsive */
 }
 
@@ -401,7 +399,6 @@ ul {
 }
 
 .table-button {
-  /*background-color: rgba(149, 209, 220, 0.4); */
   background-color: #C3EBF3;
   color: rgba(0,0,0,0.6);
   font-size: 12px;
@@ -421,11 +418,29 @@ ul {
   text-transform: capitalize;  /* for time_ago_in_words in jobs/index.html.erb */
 }
 
+@media only screen and (max-width: 1100px) {
+
+  * {
+    font-size: 98%;
+  }
+
+  td:nth-child(1), th:nth-child(1) { min-width: 100px; } /* for table headers to line up w/td rows */
+  td:nth-child(2), th:nth-child(2) { min-width: 125px; }
+  td:nth-child(3), th:nth-child(3) { min-width: 125px; }
+  td:nth-child(4), th:nth-child(4) { min-width: 190px; }
+
+}
+
 @media only screen and (max-width: 850px) {
 
   td, th {
     font-size: 80%;
   }
+
+  td:nth-child(1), th:nth-child(1) { min-width: 80px; } /* for table headers to line up w/td rows */
+  td:nth-child(2), th:nth-child(2) { min-width: 100px; }
+  td:nth-child(3), th:nth-child(3) { min-width: 100px; }
+  td:nth-child(4), th:nth-child(4) { min-width: 200px; }
 
   #home-buttons {
     display: block;
@@ -444,6 +459,21 @@ ul {
     height: 38px;
     padding: 11px;
     width: 100px;
+  }
+
+  input, textarea {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px;
+  }
+
+  input[type="submit"] {
+    font-size: 98%;
+    width: 125px;
+  }
+
+  label {
+    font-size: .9em;
   }
 
   #main-nav {
@@ -483,6 +513,10 @@ ul {
     margin-top: -25px;
   }
 
+  .table-button {
+    font-size: 9px;
+  }
+
   #tagline {
     font-size: 1.2em;
     margin-left: 17px;
@@ -500,7 +534,10 @@ ul {
   }
 
   .container {
-    /*margin-top: 85px;*/
+    width: 100%;
+  }
+
+   .container-home {
     width: 100%;
   }
 
@@ -513,7 +550,7 @@ ul {
   }
 
   .container-medium a {
-    font-size: 80%;
+    font-size: 90%;
     padding: 5px 10px 5px 10px;
   }
 
@@ -533,4 +570,23 @@ ul {
 
 }
 
+@media only screen and (max-width: 650px) {
 
+  td:nth-child(1), th:nth-child(1) { min-width: 78px; }
+  td:nth-child(2), th:nth-child(2) { min-width: 75px; }
+  td:nth-child(3), th:nth-child(3) { min-width: 65px; }
+  td:nth-child(4), th:nth-child(4) { min-width: 80px; }
+
+  .container-medium-home a {
+    font-size: 10px;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  #td-row a {
+    display: block;
+    margin-top: 5px;
+    width: 48px;
+  }
+
+}
