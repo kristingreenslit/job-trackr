@@ -37,29 +37,31 @@
             <th>Position Title</th>
             <th>Company Website URL</th>
             <th>Position Listing URL</th>
-            <th colspan="1"></th> <!-- for more info column -->
+            <!-- <th colspan="1"></th> --> <!-- for more info column -->
           </tr>
         </thead>
+
 
         <tbody>
 
           <% @jobs.each do |job| %>
 
-            <tr class="content">
-              <td><%= job.app_dt.strftime("%m/%d/%Y") %></td>
-              <td><%= job.co_name %></td>
-              <td><%= job.job_title %></td>
-              <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
-              <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>  
-              <td><div id="td-row"><%= link_to 'Edit', edit_job_path(job), :class => "table-button" %><br><br><%= link_to 'View', job, :class => "table-button" %></div></td>
-            </tr>
-
+              <tr class="content">
+                <td><%= job.app_dt.strftime("%m/%d/%Y") %></td>
+                <td><%= job.co_name %></td>
+                <td><%= job.job_title %></td>
+                <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>   
+                <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>  
+                <td><div id="td-row"><%= link_to 'Modify ', edit_job_path(job), :class => "table-button" %><%= link_to 'Details ', job, :class => "table-button" %></div></td>
+              </tr>
+            
           <% end %>
 
         </tbody>
+   
       </table>  
 
-      <br><br><br>
+     <!--  <br><br><br> -->
     </div>
 
   </div>
