@@ -12,10 +12,10 @@
             </ul>
         </div>
     <% end %>
-  
+
     <div class="field date-field">
       <%= f.label :app_dt, "Application Date: (YYYY-MM-DD)" %><br>
-      <%= f.date_field :app_dt, type:'date', :required => true %>
+      <%= f.text_field :app_dt, :required => true %>
     </div>
     <div class="field">
       <%= f.label :co_name, "Company Name:" %><br>
