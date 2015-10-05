@@ -88,7 +88,7 @@ table {
 
 tbody {
   display: block;
-  height: 375px;
+  height: 350px;
   overflow-y: auto;
 }
 
@@ -394,8 +394,13 @@ ul {
 }
 
 .login-status-jobs {
+  font-weight: bold;
   margin-bottom: 5px;
   margin-top: 23px;
+}
+
+.login-status-jobs li {
+
 }
 
 .table-button {

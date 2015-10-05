@@ -28,11 +28,11 @@
 
   <br>
     <div id="table-home">
-      <table>
+      <table id="jobstable" class="tablesorter">
       
         <thead>
           <tr>
-            <th>Application Date</th>
+            <th><a><span class="datesort"><i class="fa fa-sort"></i></span></a> Application Date</th>
             <th>Company Name</th>
             <th>Position Title</th>
            <!--  <th>Company Website URL</th> -->
@@ -47,7 +47,7 @@
           <% @jobs.each do |job| %>
 
               <tr class="content">
-                <td><%= job.try(:app_dt).try(:strftime, "%m/%d/%Y") %></td>
+                <td class="date-cell"><%= job.try(:app_dt).try(:strftime, "%m/%d/%Y") %></td>
                 <td><%= job.co_name %></td>
                 <td><%= job.job_title %></td>
                <!--  <td><a href="<%=job.co_url%>" target="_blank"><%=job.co_url%></a></td>    -->
