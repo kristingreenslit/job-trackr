@@ -89,7 +89,7 @@ table {
 
 tbody {
   display: block;
-  height: 325px; /* lost scroll bar with % and min-height */
+  height: 310px; /* lost scroll bar with % and min-height */
   overflow-y: auto;
 }
 
@@ -324,7 +324,7 @@ ul {
   margin-bottom: 12px;
   margin-top: 5px;
   padding-top: 2px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   text-align: center;
   width: 100%;
 }
@@ -336,7 +336,7 @@ ul {
 .container-medium a {
   border: 2px solid #666;
   color: rgba(0,0,0,0.6);
-  padding: 15px 20px 15px 20px;
+  padding: 10px 15px 10px 15px;
 }
 
 .container-medium a:nth-child(n+2) {
