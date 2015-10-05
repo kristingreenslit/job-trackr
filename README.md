@@ -1,12 +1,12 @@
-## Demo:
+## Application:
 
-https://job-trackr.herokuapp.com/
+http://www.jobtrackr.me/
 
 ## User Stories:
 
 ### Tier 1: The Job Search (MVP)
 
-- As a job seeker, I want a responsive, single page web application to track positions I’ve applied to so that I have one place to store data associated with an application: job title, company name, date applied, link to job post, link to application site, notes, link to resume submitted, link to cover letter submitted.
+- As a job seeker, I want to track positions I’ve applied to so that I have one place to store data associated with an application: job title, company name, date applied, link to job post, link to application site, notes, link to resume submitted, link to cover letter submitted.
 
 - As a job seeker, I want application records to change color as the 7-day, 14-day and 30-day marks approach so that I know which opportunities need follow-up communication.
 
