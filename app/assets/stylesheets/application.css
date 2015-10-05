@@ -73,6 +73,7 @@ input, textarea {
 
 label {
   font-size: 1.1em;
+  margin-left: 3px;
   text-transform: capitalize;  /* words above sign_in/sign_up text fields */
 }
 
@@ -274,6 +275,10 @@ ul {
   width: 85%;
 }
 
+.field span {
+  margin-left: 3px;
+}
+
 .container {
   background-color: rgba(255, 255, 255, 0);
   color: #5b5b5b;
@@ -331,7 +336,7 @@ ul {
 .container-medium a {
   border: 2px solid #666;
   color: rgba(0,0,0,0.6);
-  padding: 10px 20px 10px 20px;
+  padding: 15px 20px 15px 20px;
 }
 
 .container-medium a:nth-child(n+2) {
@@ -552,7 +557,7 @@ ul {
 
   .container-medium a {
     font-size: 90%;
-    padding: 5px 10px 5px 10px;
+    padding: 7px 10px 7px 10px;
   }
 
   .container-medium a:nth-child(n+2) {
