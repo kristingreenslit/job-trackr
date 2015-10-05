@@ -22,8 +22,8 @@
   <br>
 
     <div class="container-medium-home">
-        <%= link_to '+ Application', new_job_path %>
-        <a href="/jobs.csv"><button class="btn btn-success">export all</button></a>
+        <a href="/jobs/new"><i class="fa fa-plus"> Application</i></a>
+        <a href="/jobs.csv"><i class="fa fa-download"></i> CSV</a>
     </div>
 
   <br>
@@ -55,7 +55,6 @@
                 <td><span><div id="td-row"><%= link_to 'Modify', edit_job_path(job), :class => "table-button" %><%= link_to 'Details', job, :class => "table-button" %></div></span></td>
               </tr>
 
-            
           <% end %>
         
 
