@@ -17,13 +17,13 @@
   </div>
 
   <br>
-
-  <div class="container-home">
+<div class="container-home">
 
   <br>
 
     <div class="container-medium-home">
         <%= link_to '+ Application', new_job_path %>
+        <a href="/jobs.csv"><button class="btn btn-success">export all</button></a>
     </div>
 
   <br>
@@ -32,7 +32,7 @@
       
         <thead>
           <tr>
-            <th><a><span class="datesort"><i class="fa fa-sort"></i></span></a> Application Date</th>
+            <th>Application Date</th>
             <th>Company Name</th>
             <th>Position Title</th>
            <!--  <th>Company Website URL</th> -->
@@ -54,8 +54,10 @@
                 <td><a href="<%=job.list_url%>" target="_blank"><%=job.list_url%></a></td>  
                 <td><span><div id="td-row"><%= link_to 'Modify', edit_job_path(job), :class => "table-button" %><%= link_to 'Details', job, :class => "table-button" %></div></span></td>
               </tr>
+
             
           <% end %>
+        
 
         </tbody>
    
@@ -66,6 +68,7 @@
 
   </div>
 </body>
+
 
 
 

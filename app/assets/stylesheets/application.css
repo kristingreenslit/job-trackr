@@ -88,7 +88,7 @@ table {
 
 tbody {
   display: block;
-  height: 350px;
+  height: 325px; /* lost scroll bar with % and min-height */
   overflow-y: auto;
 }
 
@@ -223,7 +223,7 @@ ul {
 
 #table-home {
   margin: 0 auto;
-  width: 90%;
+  width: 98%;
 }
 
 #tagline {  /* words below masthead */
@@ -237,12 +237,13 @@ ul {
 #td-row {  /* for index row buttons to have space between them */
   font-size: 10px;
   margin-bottom: 5px;
+  margin-right: 8px;
   margin-top: 5px;
   text-align: right;
 }
 
 #td-row a { 
-  margin-left: 8px;
+  margin-left: 12px;
   width: 10%;
 }
 
@@ -534,10 +535,6 @@ ul {
     margin-top: 2px;
   }
 
-  #td-row a { 
-    margin-left: 5px;
-  }
-
   .container {
     width: 100%;
   }
@@ -578,8 +575,8 @@ ul {
 @media only screen and (max-width: 650px) {
 
   td:nth-child(1), th:nth-child(1) { min-width: 78px; }
-  td:nth-child(2), th:nth-child(2) { min-width: 75px; }
-  td:nth-child(3), th:nth-child(3) { min-width: 65px; }
+  td:nth-child(2), th:nth-child(2) { min-width: 74px; }
+  td:nth-child(3), th:nth-child(3) { min-width: 63px; }
   td:nth-child(4), th:nth-child(4) { min-width: 80px; }
 
   .container-medium-home a {
@@ -590,6 +587,7 @@ ul {
 
   #td-row a {
     display: block;
+    margin-right: 2px;
     margin-top: 5px;
     width: 48px;
   }
