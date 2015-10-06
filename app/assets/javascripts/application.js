@@ -29,11 +29,4 @@ function ready(){
 			}
 	});
 
-	$(".datesort").click(function(){
-		var applicationDate = $('.date-cell').each();
-		console.log(applicationDate);
-		var currentDate = $.now();
-		
-	})
-
 };
