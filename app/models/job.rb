@@ -10,6 +10,6 @@ class Job < ActiveRecord::Base
 	      csv << item.attributes.values_at(*column_names)
 	    end
 	  end
-	end
+	end	
 	
 end
