@@ -12,3 +12,7 @@
 !/log/.keep
 /tmp
 
+# Ignore mailer configuration
+.env
+Procfile
+
