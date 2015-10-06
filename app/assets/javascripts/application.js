@@ -19,7 +19,6 @@ $(document).ready(ready)  // prevents turbolinks from interfering with $(documen
 $(document).on('page:load', ready) 
 
 function ready(){
-
  $(".submit-button").click(function(){  
   var dateField = $(".date-field");
    if (dateField !== ""){  /* work-around to improve ux in Safari. Console indicates value in 'f.data_field' despite no support for form helper or built-in visual cues for validations */
@@ -28,5 +27,4 @@ function ready(){
        console.log("");
       }
    });
- 
 };

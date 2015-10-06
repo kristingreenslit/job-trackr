@@ -5,12 +5,10 @@ class JobsController < ApplicationController
   # GET /jobs.json
   def index
     @jobs = current_user.jobs
-
     respond_to do |format|
       format.html
-      format.csv { send_data @jobs.as_csv }
+    format.csv { send_data @jobs.as_csv }
     end
-
   end
 
   # GET /jobs/1
