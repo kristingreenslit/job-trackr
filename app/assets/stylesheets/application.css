@@ -118,7 +118,7 @@ td:nth-child(4) {
   word-break: break-all;  /* enables word-wrap for urls so table is responsive */
 }
 
-td:nth-child(6) {  /* "More Info" link */
+td:nth-child(6) {  /* "Details" link */
   font-weight: 500;
 }
 
@@ -126,7 +126,7 @@ td:nth-child(6) :hover {
   color: rgba(0,0,0,0.4)
 }
 
-tr.content:nth-child(odd) {  /* zebra striping for job table data */
+tr.content:nth-child(odd) {  /* zebra striping for job table rows */
   background-color: rgba(215,215,215,.7)
 }
 
@@ -177,10 +177,6 @@ ul {
   margin-top: -65px;
 }
 
-#job_app_dt {  /* for date picker field in job form */
-  font-family: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
 #main-nav {
   background-color: rgba(255, 255, 255, 0.80);
   height: 80px;
@@ -211,7 +207,6 @@ ul {
 
 #notice-jobs {  /* red flash messages for devise after sign_in or sign_up */
   color: #ab171e;
- /* margin-bottom: 80px;*/
   margin-top: -38px;
   text-align: right;
   width: 100%;
@@ -434,7 +429,6 @@ ul {
   td:nth-child(2), th:nth-child(2) { min-width: 125px; }
   td:nth-child(3), th:nth-child(3) { min-width: 125px; }
   td:nth-child(4), th:nth-child(4) { min-width: 190px; }
-
 }
 
 @media only screen and (max-width: 850px) {
@@ -569,12 +563,11 @@ ul {
     margin: -5px 0px 5px 15px;
     text-align: left;
   }
-
 }
 
 @media only screen and (max-width: 650px) {
 
-  td:nth-child(1), th:nth-child(1) { min-width: 78px; }
+  td:nth-child(1), th:nth-child(1) { min-width: 78px; }  /* for table headers to line up w/td rows */
   td:nth-child(2), th:nth-child(2) { min-width: 74px; }
   td:nth-child(3), th:nth-child(3) { min-width: 63px; }
   td:nth-child(4), th:nth-child(4) { min-width: 80px; }
@@ -591,5 +584,4 @@ ul {
     margin-top: 5px;
     width: 48px;
   }
-
 }

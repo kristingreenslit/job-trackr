@@ -8,8 +8,4 @@ class ApplicationController < ActionController::Base
   		:jobs
 	end
 
-	# def after_sign_out_path_for(resource_or_scope)
- 	# 	:pages#home
-	# end
-
 end

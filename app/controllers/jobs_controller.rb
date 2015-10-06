@@ -7,9 +7,9 @@ class JobsController < ApplicationController
     @jobs = current_user.jobs
 
     respond_to do |format|
-    format.html
-    format.csv { send_data @jobs.as_csv }
-  end
+      format.html
+      format.csv { send_data @jobs.as_csv }
+    end
 
   end
 
@@ -79,5 +79,6 @@ class JobsController < ApplicationController
     def job_params
       params.require(:job).permit(:app_dt, :co_name, :co_url, :job_title, :list_url, :app_url, :res_url, :cover_url, :notes)
     end
-end
+    
+  end
 

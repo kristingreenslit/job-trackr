@@ -2,15 +2,15 @@
 
   <%= form_for(@job) do |f| %>
  
-      <% if @job.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
-            <ul>
-            <% @job.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-        </div>
+    <% if @job.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@job.errors.count, "error") %> prohibited this job from being saved:</h2>
+          <ul>
+          <% @job.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+      </div>
     <% end %>
 
     <div class="field date-field">
@@ -50,13 +50,12 @@
       <%= f.text_area :notes %>
     </div>
 
-  <br>
+    <br>
 
     <div class="container-medium submit-button">
         <%= f.submit %>
     </div>
 
-<!--   <br> -->
-
   <% end %>
+  
 </body>
